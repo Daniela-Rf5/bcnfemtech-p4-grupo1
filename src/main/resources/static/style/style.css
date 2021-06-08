@@ -1,0 +1,22 @@
+*{
+    margin:0;
+    padding:0;
+}
+.navBar{
+    background: #000000;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+}
+#logo{
+    width: 15%;
+    height: 15%;
+}
+p{
+    font-family: "Roboto Light", Tahoma, Arial, sans-serif;
+    color: #FFFFFFFF;
+    font-weight: bold;
+    font-size: 15px;
+    margin-right: 50px;
+
+}
