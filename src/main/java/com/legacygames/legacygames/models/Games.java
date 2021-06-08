@@ -1,6 +1,5 @@
 package com.legacygames.legacygames.models;
 
-import org.springframework.data.annotation.Id;
 import javax.persistence.*;
 import java.io.Serializable;
 
@@ -9,7 +8,7 @@ import static javax.persistence.GenerationType.SEQUENCE;
 @Entity
 @Table(name="games")
 
-public class Games implements Serializable{
+public class Games implements Serializable {
     @Id
     @GeneratedValue(strategy = SEQUENCE)
     private Long id;
