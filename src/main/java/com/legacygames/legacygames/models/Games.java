@@ -80,6 +80,25 @@ public class Games implements Serializable {
     public void setPegiDescriptor(String pegiDescriptor) {
         this.pegiDescriptor = pegiDescriptor;
     }
+
+    //no necesario Override porque
+    @Override
+    public String toString() {
+        return "Game{" +
+                "id=" + id +
+                ", title='" + title + '\'' +
+                ", platform='" + platform + '\'' +
+                ", year='" + year + '\'' +
+                ", Originalprice='" + originalPrice + '\'' +
+                ", tag='" + tag + '\'' +
+                ", discount='" + discount + '\'' +
+                ", applyDiscount='" + applyDiscount + '\'' +
+                ", category='" + category + '\'' +
+                ", publisher='" + publisher + '\'' +
+                ", PEGI='" + pegi + '\'' +
+                ", PEGI content descriptor='" + pegiDescriptor + '\'' +
+                '}';
+    }
 }
 
 
