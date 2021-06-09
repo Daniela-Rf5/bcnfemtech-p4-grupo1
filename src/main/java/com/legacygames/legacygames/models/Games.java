@@ -14,7 +14,7 @@ public class Games implements Serializable {
     private Long id;
     private String title;
     private String platform;
-    private Integer year;
+    private Integer yearR;
     private Float originalPrice;
     private String tag;
     private Float discount;
@@ -39,9 +39,9 @@ public class Games implements Serializable {
         this.platform=platform;
     }
 
-    public Integer getYear(){return year;}
+    public Integer getYearR(){return yearR;}
     public void setYear(Integer year){
-        this.year=year;
+        this.yearR=yearR;
     }
 
     public Float getOriginalPrice(){return originalPrice;}
@@ -88,15 +88,15 @@ public class Games implements Serializable {
                 "id=" + id +
                 ", title='" + title + '\'' +
                 ", platform='" + platform + '\'' +
-                ", year='" + year + '\'' +
-                ", Originalprice='" + originalPrice + '\'' +
+                ", yearR='" + yearR + '\'' +
+                ", originalPrice='" + originalPrice + '\'' +
                 ", tag='" + tag + '\'' +
                 ", discount='" + discount + '\'' +
                 ", applyDiscount='" + applyDiscount + '\'' +
                 ", category='" + category + '\'' +
                 ", publisher='" + publisher + '\'' +
                 ", PEGI='" + pegi + '\'' +
-                ", PEGI content descriptor='" + pegiDescriptor + '\'' +
+                ", PEGIDescriptor='" + pegiDescriptor + '\'' +
                 '}';
     }
 }
