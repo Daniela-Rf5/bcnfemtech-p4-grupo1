@@ -16,14 +16,22 @@
     width: 110px;
     height: 100px;
 }
+.boton {
+    cursor:pointer;
+    background-color: transparent;
+    color: #FFFFFFFF;
+    border-color: transparent;
+    font-size: 16px;
+    font-weight: bold;
+}
 p{
     font-family: "Roboto Light", Tahoma, Arial, sans-serif;
     color: #FFFFFFFF;
     font-weight: bold;
     font-size: 15px;
     margin-right: 50px;
-
 }
+
 .footer{
     position: fixed;
     bottom: 0;
@@ -35,6 +43,7 @@ p{
     font-size: 75%;
     background: #FFA502;
 }
+
 table {
     background: white;
     width: 50%;
