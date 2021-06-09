@@ -34,3 +34,18 @@ p{
     color: #fff;
     font-size: 75%;
     background: #FFA502;
+}
+table {
+    background: white;
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 2%;
+    border-collapse: collapse;
+    text-align: center;
+}
+th {
+    background-color: rgba(5, 5, 100, 95);
+    height: 35px;
+    border-bottom: 1px solid rgb(210, 220, 250);
+    color: rgb(120, 120, 120);
+}
