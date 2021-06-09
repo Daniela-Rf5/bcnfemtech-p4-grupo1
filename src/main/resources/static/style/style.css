@@ -18,7 +18,7 @@
 }
 p{
     font-family: "Roboto Light", Tahoma, Arial, sans-serif;
-    color: #FFFFFFFF;
+    color: #FC3727;
     font-weight: bold;
     font-size: 15px;
     margin-right: 50px;
@@ -33,5 +33,5 @@ p{
     padding-top: 20px;
     color: #fff;
     font-size: 75%;
-    background: #FFA502;
+    background: #FFAA05;
 }
