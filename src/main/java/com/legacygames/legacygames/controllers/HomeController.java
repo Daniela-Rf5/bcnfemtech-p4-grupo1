@@ -10,9 +10,5 @@ public class HomeController {
     public String home() {
         return "home";
     }
-    @GetMapping("/inventory")
-    public String inventory(){
-        return "inventory";
-    }
 }
 
