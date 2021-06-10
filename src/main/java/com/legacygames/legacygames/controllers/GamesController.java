@@ -25,10 +25,10 @@ public class GamesController {
         model.addAttribute("games", games);
         return "games/inventory";
     }
-    @GetMapping("games/inventory")
-    public String inventory(){
-        return "inventory";
-    }
+   // @GetMapping("games/inventory")
+    //public String inventory(){
+    //    return "inventory";
+   // }
 
     }
 

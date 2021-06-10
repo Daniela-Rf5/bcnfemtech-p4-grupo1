@@ -2,6 +2,10 @@
     margin:0;
     padding:0;
 }
+body{
+    background-color: #FFAA05;
+    color:white;
+}
 #fondo{
     width: 100%;
     height: 607px;
@@ -13,7 +17,7 @@
     align-items: center;
 }
 
-button {
+.button{
     cursor:pointer;
     background-color: transparent;
     color: #FFFFFFFF;
@@ -35,7 +39,7 @@ button:hover{
 }
 p{
     font-family: "Roboto Light", Tahoma, Arial, sans-serif;
-    color: #FC3727;
+    /*lor: #FC3727;*/
     font-weight: bold;
     font-size: 15px;
     margin-right: 50px;
@@ -50,5 +54,5 @@ p{
     padding-top: 20px;
     color: #fff;
     font-size: 75%;
-    background: #FFAA05;
+    background: #FC3727;
 }
