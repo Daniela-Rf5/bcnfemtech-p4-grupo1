@@ -56,3 +56,44 @@ p{
     font-size: 75%;
     background: #FC3727;
 }
+
+/*Estilo para la sección inventory*/
+
+.container{
+    font-family:Roboto, Tahoma, Calibri;
+    margin:50px auto;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    border-collapse: collapse;
+    width: 100%;
+    border-radius: 100px;
+}
+
+h1{
+    font-family:Roboto, Tahoma, Calibri;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+thead{
+    background-color: #000000;
+
+}
+table{
+    margin: 1em 0;
+    min-width: 300px;
+    color: #fcfbfb;
+    width: 80%;
+}
+
+tr {
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+
+tr:hover {
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+
+}

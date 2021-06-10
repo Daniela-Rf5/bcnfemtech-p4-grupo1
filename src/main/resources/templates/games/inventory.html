@@ -1,17 +1,18 @@
 <head th:replace="fragments/head"></head>
 <body>
 <header th:replace="fragments/header"></header>
-    <h3>Inventario de video juegos</h3>
-    </header>
+<h1>Inventory Games</h1>
+<section class="container">
     <table>
         <thead>
         <tr>
+            <th>Id</th>
             <th>Title</th>
             <th>Platform</th>
             <th>Year</th>
             <th>Price</th>
             <th>Hashtag</th>
-            <th> Discount %</th>
+            <th>Discount %</th>
             <th>Price (discount)</th>
             <th>Category</th>
             <th>Publisher</th>
@@ -19,11 +20,24 @@
             <th>Content Descriptors</th>
         </tr>
         </thead>
+        <tbody>
+        <tr th:each="game: ${games}">
+            <th scope="row" th:text="${game.id}"></th>
+            <td th:text="${game.title}"></td>
+            <td th:text="${game.platform}"></td>
+            <td th:text="${game.yearR}"></td>
+            <td th:text="${game.Price}"></td>
+            <td th:text="${game.tag}"></td>
+            <td th:text="${game.discount}"></td>
+            <td th:text="${game.discounted}"></td>
+            <td th:text="${game.category}"></td>
+            <td th:text="${game.publisher}"></td>
+            <td th:text="${game.pegi}"></td>
+            <td th:text="${game.descripter}"></td>
+        </tr>
+        </tbody>
     </table>
-    <section class="container">
-        <h1 th:text="${title}"></h1>
-        <p th:text="${games}"></p>
-     </section>
+</section>
 
-    <footer th:replace="fragments/footer"></footer>
- </body>
+<footer th:replace="fragments/footer"></footer>
+</body>

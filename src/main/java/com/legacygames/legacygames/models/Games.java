@@ -22,8 +22,16 @@ public class Games implements Serializable {
     private String category;
     private String publisher;
     private Long pegi;
-    private String descripter; //pegi descriptor
 
+    public String getDescripter() {
+        return descripter;
+    }
+
+    public void setDescripter(String descripter) {
+        this.descripter = descripter;
+    }
+
+    private String descripter; //pegi descriptor
     public Long getId() {return id;}
     public void setId(Long id){
         this.id=id;
@@ -79,10 +87,6 @@ public class Games implements Serializable {
         this.pegi=pegi;
     }
 
-    public String getdescripter(){return descripter;}
-    public void setdescripter(String descripter) {
-        this.descripter = descripter;
-    }
 
     //no necesario Override porque
     @Override
