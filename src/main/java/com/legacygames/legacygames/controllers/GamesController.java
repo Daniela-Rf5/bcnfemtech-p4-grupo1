@@ -23,7 +23,7 @@ public class GamesController {
         List<Games> games = gamesService.allGames();
         model.addAttribute("title", "Games list");
         model.addAttribute("games", games);
-        return "games/all";
+        return "games/inventory";
     }
     }
 

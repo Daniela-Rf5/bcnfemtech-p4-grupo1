@@ -1,4 +1,6 @@
+<head th:replace="fragments/head"></head>
 <body>
+<header th:replace="fragments/header"></header>
     <h3>Inventario de video juegos</h3>
     </header>
     <table>
@@ -18,4 +20,10 @@
         </tr>
         </thead>
     </table>
-</body>
+    <section class="container">
+        <h1 th:text="${title}"></h1>
+        <p th:text="${games}"></p>
+     </section>
+
+    <footer th:replace="fragments/footer"></footer>
+ </body>

@@ -5,13 +5,13 @@ CREATE TABLE games (
                        title VARCHAR(255) NOT NULL,
                        platform VARCHAR(255) NOT NULL,
                        yearR NUMERIC NOT NULL,
-                       originalPrice NUMERIC (5,2) NOT NULL,
+                       price NUMERIC (5,2) NOT NULL,
                        tag VARCHAR(255),
                        discount VARCHAR(255),
-                       applyDiscount NUMERIC (255),
+                       discounted NUMERIC ,
                        category VARCHAR(255) NOT NULL,
                        publisher VARCHAR(255) NOT NULL,
                        pegi VARCHAR(255) NOT NULL,
-                       pegiDescriptor VARCHAR(255)
+                       descripter VARCHAR(255)
 
 );

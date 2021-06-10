@@ -15,14 +15,14 @@ public class Games implements Serializable {
     private String title;
     private String platform;
     private Integer yearR;
-    private Float originalPrice;
+    private Float Price;
     private String tag;
-    private Float discount;
-    private Float applyDiscount;
+    private Integer discount;
+    private Float discounted;  //discounted price
     private String category;
     private String publisher;
     private Long pegi;
-    private String pegiDescriptor;
+    private String descripter; //pegi descriptor
 
     public Long getId() {return id;}
     public void setId(Long id){
@@ -44,9 +44,9 @@ public class Games implements Serializable {
         this.yearR=yearR;
     }
 
-    public Float getOriginalPrice(){return originalPrice;}
-    public void setOriginalPrice(Float originalPrice){
-        this.originalPrice=originalPrice;
+    public Float getPrice(){return Price;}
+    public void setPrice(Float Price){
+        this.Price=Price;
     }
 
     public String getTag(){return tag;}
@@ -54,14 +54,16 @@ public class Games implements Serializable {
         this.tag = tag;
     }
 
-    public Float getDiscount(){return discount;}
-        public void setDiscount(Float discount){
+    public Integer getDiscount(){return discount;}
+        public void setDiscount(Integer discount){
         this.discount=discount;
         }
-    public Float getApplyDiscount(){return applyDiscount;}
-    public void setApplyDiscount(Float applyDiscount){
-        this.applyDiscount=applyDiscount;
+
+    public Float getDiscounted(){return discounted;}
+    public void setDiscounted(Float Discounted){
+        this.discounted=discounted;
     }
+
     public String getCategory(){return category;}
     public void setCategory(String category){
         this.category=category;
@@ -71,14 +73,15 @@ public class Games implements Serializable {
     public void setPublisher(String publisher){
         this.publisher=publisher;
     }
+
     public Long getPegi() {return pegi;}
     public void setPegi(Long pegi){
         this.pegi=pegi;
     }
 
-    public String getPegiDescriptor(){return pegiDescriptor;}
-    public void setPegiDescriptor(String pegiDescriptor) {
-        this.pegiDescriptor = pegiDescriptor;
+    public String getdescripter(){return descripter;}
+    public void setdescripter(String descripter) {
+        this.descripter = descripter;
     }
 
     //no necesario Override porque
@@ -89,14 +92,14 @@ public class Games implements Serializable {
                 ", title='" + title + '\'' +
                 ", platform='" + platform + '\'' +
                 ", yearR='" + yearR + '\'' +
-                ", originalPrice='" + originalPrice + '\'' +
+                ", OriginalPrice='" + Price + '\'' +
                 ", tag='" + tag + '\'' +
                 ", discount='" + discount + '\'' +
-                ", applyDiscount='" + applyDiscount + '\'' +
+                ", applyDiscount='" + discounted + '\'' +
                 ", category='" + category + '\'' +
                 ", publisher='" + publisher + '\'' +
                 ", PEGI='" + pegi + '\'' +
-                ", PEGIDescriptor='" + pegiDescriptor + '\'' +
+                ", PEGIDescriptor='" + descripter + '\'' +
                 '}';
     }
 }
