@@ -1,7 +1,7 @@
 package com.legacygames.legacygames.controllers;
 
 import com.legacygames.legacygames.Services.GamesService;
-import com.legacygames.legacygames.models.Games;
+import com.legacygames.legacygames.models.Game;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -20,15 +20,11 @@ public class GamesController {
 
     @GetMapping("/games")
     String listGames(Model model) {
-        List<Games> games = gamesService.allGames();
+        List<Game> games = gamesService.allGames();
         model.addAttribute("title", "Games list");
         model.addAttribute("games", games);
         return "games/inventory";
     }
-   // @GetMapping("games/inventory")
-    //public String inventory(){
-    //    return "inventory";
-   // }
 
     }
 

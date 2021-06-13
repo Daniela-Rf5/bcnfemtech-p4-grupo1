@@ -1,6 +1,6 @@
 package com.legacygames.legacygames.Services;
 
-import com.legacygames.legacygames.models.Games;
+import com.legacygames.legacygames.models.Game;
 import com.legacygames.legacygames.models.GamesRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -15,15 +15,15 @@ public class GamesService {
     public GamesService(GamesRepository gamesRepository) {
         this.gamesRepository = gamesRepository;
     }
-    public List<Games> allGames(){
-        List<Games>allGames = (List<Games>) gamesRepository.findAll();
+    public List<Game> allGames(){
+        List<Game>allGames = (List<Game>) gamesRepository.findAll();
         return  allGames;
 
     }
-    public void save(Games games){
+    public void save(Game games){
         gamesRepository.save(games);
     }
-    public Games findById(Long id){
+    public Game findById(Long id){
         return gamesRepository.findById(id).orElse(null);
 
     }

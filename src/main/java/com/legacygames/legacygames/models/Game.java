@@ -8,30 +8,30 @@ import static javax.persistence.GenerationType.SEQUENCE;
 @Entity
 @Table(name="games")
 
-public class Games implements Serializable {
+public class Game implements Serializable {
     @Id
     @GeneratedValue(strategy = SEQUENCE)
     private Long id;
     private String title;
     private String platform;
-    private Integer yearR;
-    private Float Price;
+    private Integer releaseYear;
+    private Double price;
     private String tag;
     private Integer discount;
-    private Float discounted;  //discounted price
+    private Double discountPrice;  //discounted price
     private String category;
     private String publisher;
-    private Long pegi;
+    private Integer pegi;
+    private String pegiDescriptor;
 
-    public String getDescripter() {
-        return descripter;
+    public String getPegiDescriptor() {
+        return pegiDescriptor;
     }
 
-    public void setDescripter(String descripter) {
-        this.descripter = descripter;
+    public void setPegiDescriptor(String pegiDescriptor) {
+        this.pegiDescriptor = pegiDescriptor;
     }
 
-    private String descripter; //pegi descriptor
     public Long getId() {return id;}
     public void setId(Long id){
         this.id=id;
@@ -47,14 +47,14 @@ public class Games implements Serializable {
         this.platform=platform;
     }
 
-    public Integer getYearR(){return yearR;}
-    public void setYear(Integer year){
-        this.yearR=yearR;
+    public Integer getReleaseYear(){return releaseYear;}
+    public void setReleaseYear(Integer releaseYear){
+        this.releaseYear = releaseYear;
     }
 
-    public Float getPrice(){return Price;}
-    public void setPrice(Float Price){
-        this.Price=Price;
+    public Double getPrice(){return price;}
+    public void setPrice(Double price){
+        this.price =price;
     }
 
     public String getTag(){return tag;}
@@ -67,9 +67,9 @@ public class Games implements Serializable {
         this.discount=discount;
         }
 
-    public Float getDiscounted(){return discounted;}
-    public void setDiscounted(Float Discounted){
-        this.discounted=discounted;
+    public Double getDiscountPrice(){return discountPrice;}
+    public void setDiscountPrice(Double discountPrice){
+        this.discountPrice = discountPrice;
     }
 
     public String getCategory(){return category;}
@@ -82,8 +82,8 @@ public class Games implements Serializable {
         this.publisher=publisher;
     }
 
-    public Long getPegi() {return pegi;}
-    public void setPegi(Long pegi){
+    public Integer getPegi() {return pegi;}
+    public void setPegi(Integer pegi){
         this.pegi=pegi;
     }
 
@@ -95,15 +95,15 @@ public class Games implements Serializable {
                 "id=" + id +
                 ", title='" + title + '\'' +
                 ", platform='" + platform + '\'' +
-                ", yearR='" + yearR + '\'' +
-                ", OriginalPrice='" + Price + '\'' +
+                ", yearR='" + releaseYear + '\'' +
+                ", OriginalPrice='" + price + '\'' +
                 ", tag='" + tag + '\'' +
                 ", discount='" + discount + '\'' +
-                ", applyDiscount='" + discounted + '\'' +
+                ", applyDiscount='" + discountPrice + '\'' +
                 ", category='" + category + '\'' +
                 ", publisher='" + publisher + '\'' +
                 ", PEGI='" + pegi + '\'' +
-                ", PEGIDescriptor='" + descripter + '\'' +
+                ", PEGIDescriptor='" + pegiDescriptor + '\'' +
                 '}';
     }
 }

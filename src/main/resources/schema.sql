@@ -4,14 +4,14 @@ CREATE TABLE games (
                        id   BIGSERIAL PRIMARY KEY,
                        title VARCHAR(255) NOT NULL,
                        platform VARCHAR(255) NOT NULL,
-                       yearR NUMERIC NOT NULL,
-                       price NUMERIC (5,2) NOT NULL,
+                       release_year NUMERIC NOT NULL,
+                       price NUMERIC (4,2) NOT NULL,  --PREGUNTAR CLIENTE SI MÁS ADELANTE AÑADIRÁ ALGUN JUEGO O CONSOLA PRECIO SUPERIOR A 99.99--
                        tag VARCHAR(255),
-                       discount VARCHAR(255),
-                       discounted NUMERIC ,
+                       discount INTEGER,
+                       discount_price NUMERIC (4,2),
                        category VARCHAR(255) NOT NULL,
                        publisher VARCHAR(255) NOT NULL,
-                       pegi VARCHAR(255) NOT NULL,
-                       descripter VARCHAR(255)
+                       pegi INTEGER NOT NULL,
+                       content_descriptor VARCHAR(255)
 
 );
