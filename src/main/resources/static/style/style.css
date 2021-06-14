@@ -54,7 +54,6 @@ footer{
 footer p{
     font-family: "Roboto Light", Tahoma, Arial, sans-serif;
     margin-left: 50px;
-
 }
 
 /*Estilo para la sección inventory*/
@@ -67,11 +66,12 @@ footer p{
 }
 
 h1{
-    font-family:Roboto, Tahoma, Calibri;
+    font-family: Slice, Lego brix, type-2, fast_hand;
     display: flex;
     justify-content: center;
     text-align: center;
     margin-top:15px;
+    font-size: 55px;
 }
 
 thead{
