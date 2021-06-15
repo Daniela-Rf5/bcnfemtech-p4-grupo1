@@ -1,5 +1,5 @@
 
-INSERT INTO games(title, platform, release_year, price, tag, discount, discount_price, category, publisher, pegi, content_descriptor)
+INSERT INTO games(title, platform, release_year, price, tag, discount, discount_price, category, publisher, pegi, pegi_descriptor)
 
 VALUES ('Wii Sports','Wii', '2006', '19.99',NULL ,NULL,NULL,'Sports','Nintendo', '7', NULL),
        ('Super Mario Bros.','NES', '1985', '14.99', NULL, NULL, NULL,'Platform','Nintendo','7', NULL),
