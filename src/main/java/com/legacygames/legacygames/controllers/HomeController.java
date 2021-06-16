@@ -18,12 +18,14 @@ public class HomeController {
         this.gamesService = gamesService;
     }
 
-    @GetMapping("/")
+    @GetMapping(path = {"/","/games", "/index"})
     String listGames(Model model) {
         List<Game> games = gamesService.allGames();
-        model.addAttribute("title", "Games list");
+        model.addAttribute("title", "Browse games");
         model.addAttribute("games", games);
-
-        return "games/inventory";
+        return "home";
     }
+
+
+
 }

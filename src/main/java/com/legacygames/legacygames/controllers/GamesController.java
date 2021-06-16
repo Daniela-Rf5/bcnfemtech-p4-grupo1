@@ -18,12 +18,14 @@ public class GamesController {
         this.gamesService = gamesService;
     }
 
-    @GetMapping("/games")
-    String listGames(Model model) {
-        List<Game> games = gamesService.allGames();
-        model.addAttribute("title", "Games list");
-        model.addAttribute("games", games);
-        return "games/inventory";
+
+    @GetMapping("/games/new")
+    String newGame(Model model){
+        Game game = new Game();
+        model.addAttribute("game", game);
+        model.addAttribute("title", "create new game");
+        return "home";
+
     }
 
     }

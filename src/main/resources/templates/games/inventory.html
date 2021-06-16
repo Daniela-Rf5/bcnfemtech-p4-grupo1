@@ -1,12 +1,6 @@
-<head th:replace="fragments/head">
-</head>
-<body>
-<header th:replace="fragments/header"></header>
-<h1>Inventory Games</h1>
-<div class="menu">
-    <a class="new" th:href="@{/games/newgames.html}">Create</a>
-</div>
-<section class="container">
+
+<section class="container" xmlns:th="http://www.thymeleaf.org">
+    <h1 th:text="${title}"></h1>
     <table>
         <thead>
         <tr>
@@ -41,7 +35,6 @@
         </tr>
         </tbody>
     </table>
+
 </section>
 
-<footer th:replace="fragments/footer"></footer>
-</body>
