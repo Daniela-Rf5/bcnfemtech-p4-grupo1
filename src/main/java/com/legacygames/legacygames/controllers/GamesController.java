@@ -24,7 +24,7 @@ public class GamesController {
         Game game = new Game();
         model.addAttribute("game", game);
         model.addAttribute("title", "create new game");
-        return "home";
+        return "games/newgames";
 
     }
 

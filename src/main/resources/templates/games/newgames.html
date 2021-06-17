@@ -2,7 +2,59 @@
 
 <body>
 <header th:replace="fragments/header"></header>
-<h1>Formulario</h1>
+<section class="container">
+    <h1 th:text="${title}"></h1>
+<form th:action="@{games/newgames}" th:object="${game}" method="post">
+    <div class="form-group">
+        <input type="hidden" th:field="*{id}">
+        <label class="col-md2" for="title"> Title</label>
+        <input th:field="*{title}" type="text" class="col-md6 form-control form-control-sm" id="title" placeholder="Add title">
+    </div>
+    <div class="form-group">
+        <label class="col-md2" for="platform">Platform</label>
+        <input th:field="*{platform}" type="text" class="col-md6 form-control form-control-sm" id="platform" placeholder="Add platform">
+    </div>
+    <div class="form-group">
+        <label class="col-md2" for="releaseYear">Release year</label>
+        <input th:field="*{releaseYear}" type="text" class="col-md6 form-control form-control-sm" id="releaseYear" placeholder="Add releaseYear">
+    </div>
+    <div class="form-group">
+        <label class="col-md2" for="price">Price</label>
+        <input th:field="*{price}" type="text" class="col-md6 form-control form-control-sm" id="price" placeholder="Add price">
+    </div>
+    <div class="form-group">
+        <label class="col-md2" for="tag">Tag</label>
+        <input th:field="*{tag}" type="text" class="col-md6 form-control form-control-sm" id="tag" placeholder="Add tag">
+    </div>
+    <div class="form-group">
+        <label class="col-md2" for="discount">Discount</label>
+        <input th:field="*{discount}" type="text" class="col-md6 form-control form-control-sm" id="discount" placeholder="Add discount">
+    </div>
+    <div class="form-group">
+        <label class="col-md2" for="discountPrice">Discount price</label>
+        <input th:field="*{discountPrice}" type="text" class="col-md6 form-control form-control-sm" id="discountPrice" placeholder="Add discount price">
+    </div>
+    <div class="form-group">
+        <label class="col-md2" for="category">Category</label>
+        <input th:field="*{category}" type="text" class="col-md6 form-control form-control-sm" id="category" placeholder="Add category">
+    </div>
+    <div class="form-group">
+        <label class="col-md2" for="publisher">Publisher</label>
+        <input th:field="*{publisher}" type="text" class="col-md6 form-control form-control-sm" id="publisher" placeholder="Add publisher">
+    </div>
+    <div class="form-group">
+        <label class="col-md2" for="pegi">Pegi</label>
+        <input th:field="*{pegi}" type="text" class="col-md6 form-control form-control-sm" id="pegi" placeholder="Add pegi">
+    </div>
+    <div class="form-group">
+        <label class="col-md2" for="pegiDescriptor">Pegi descriptor</label>
+        <input th:field="*{pegiDescriptor}" type="text" class="col-md6 form-control form-control-sm" id="pegiDescriptor" placeholder="Add pegi descriptor">
+    </div>
+    <div class="card-footer">
+        <input type="submit" class="btn btn-primary btn-sm" value="Save"/>
+    </div>
+</form>
+</section>
 </body>
 <footer th:replace="fragments/footer.html"></footer>
 </html>
