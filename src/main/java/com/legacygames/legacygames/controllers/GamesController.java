@@ -32,7 +32,7 @@ public class GamesController {
     @PostMapping("/games/new")
     public String addBooks(@ModelAttribute Game game) {
         gamesService.save(game);
-        return "redirect:/books";
+        return "redirect:/newgames";
     }
 
 
