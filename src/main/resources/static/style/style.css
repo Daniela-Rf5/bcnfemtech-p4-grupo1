@@ -60,9 +60,9 @@ footer p{
 
 .container{
     font-family:Roboto, Tahoma, Calibri;
-    display: flex;
     width: 114%;
     margin: 50px;
+
 }
 
 h1{
@@ -132,4 +132,7 @@ form {
     border: none;
     border-radius: 8px;
     cursor:pointer;
+}
+.container-card{
+    display: flex;
 }

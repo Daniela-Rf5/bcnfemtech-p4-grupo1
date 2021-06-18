@@ -1,40 +1,16 @@
 
 <section class="container" xmlns:th="http://www.thymeleaf.org">
     <h1 th:text="${title}"></h1>
-    <table>
-        <thead>
-        <tr>
-            <th>Id</th>
-            <th>Title</th>
-            <th>Platform</th>
-            <th>Year</th>
-            <th>Price</th>
-            <th>Hashtag</th>
-            <th>Discount %</th>
-            <th>Price (discount)</th>
-            <th>Category</th>
-            <th>Publisher</th>
-            <th>PEGI</th>
-            <th>Content Descriptors</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr th:each="game: ${games}">
-            <th scope="row" th:text="${game.id}"></th>
-            <td th:text="${game.title}"></td>
-            <td th:text="${game.platform}"></td>
-            <td th:text="${game.releaseYear}"></td>
-            <td th:text="${game.price}"></td>
-            <td th:text="${game.tag}"></td>
-            <td th:text="${game.discount}"></td>
-            <td th:text="${game.discountPrice}"></td>
-            <td th:text="${game.category}"></td>
-            <td th:text="${game.publisher}"></td>
-            <td th:text="${game.pegi}"></td>
-            <td th:text="${game.pegiDescriptor}"></td>
-        </tr>
-        </tbody>
-    </table>
-
+    <div class="container-card">
+    <div class="card" th:each="game:${games}">
+        <p th:text="${game.title}"></p>
+        <p th:text="${game.platform}"></p>
+        <p th:text="${game.pegi}"></p>
+        <p th:text="${game.discount}"></p>
+        <p th:text="${game.price}"></p>
+        <button>edit</button> <!--RECORDAR QUE SE DEBE PONER DIRECCION DE BOTON EDIT Y DELETE-->
+        <button>delete</button>
+    </div>
+    </div>
 </section>
 
