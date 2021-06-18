@@ -45,5 +45,12 @@ public class GamesController {
         model.addAttribute( "title", "Edit Games");
             return "games/newgames";
     }
+
+    @GetMapping("games/delete/{id}")
+    public String delete(@PathVariable Long id) {
+        gamesService.delete(id);
+        return "redirect:/games";
+    }
+
 }
 

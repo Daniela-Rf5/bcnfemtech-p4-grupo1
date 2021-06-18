@@ -11,7 +11,9 @@
         <button>
             <a th:href="'/games/new/'+${game.id}">Edit</a>
         </button> <!--RECORDAR QUE SE DEBE PONER DIRECCION DE BOTON EDIT Y DELETE-->
-        <button>delete</button>
+        <button>
+            <a th:href="'/games/delete/'+${game.id}">Delete</a>
+        </button>
     </div>
     </div>
 </section>
