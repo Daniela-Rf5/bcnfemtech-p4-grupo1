@@ -8,7 +8,9 @@
         <p th:text="${game.pegi}"></p>
         <p th:text="${game.discount}"></p>
         <p th:text="${game.price}"></p>
-        <button>edit</button> <!--RECORDAR QUE SE DEBE PONER DIRECCION DE BOTON EDIT Y DELETE-->
+        <button>
+            <a th:href="'/games/new/'+${game.id}">Edit</a>
+        </button> <!--RECORDAR QUE SE DEBE PONER DIRECCION DE BOTON EDIT Y DELETE-->
         <button>delete</button>
     </div>
     </div>

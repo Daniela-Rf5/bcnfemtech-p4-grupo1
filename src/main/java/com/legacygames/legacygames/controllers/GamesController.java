@@ -7,6 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import java.util.List;
@@ -29,12 +30,6 @@ public class GamesController {
         return "games/newgames";
 
     }
-    @PostMapping("/games/new")
-    public String addBooks(@ModelAttribute Game game) {
-        gamesService.save(game);
-        return "redirect:/newgames";
-    }
-
 
     @PostMapping("/games/new")
     public String addGame(@ModelAttribute Game game) {
@@ -42,6 +37,13 @@ public class GamesController {
        // return "redirect:/index";
         return "redirect:/games";
         //return "redirect:home";
+    }
+    @GetMapping("games/new/{id}")
+    String editGame(Model model, @PathVariable Long id){
+        Game game = gamesService.findById(id);
+        model.addAttribute("game", game);
+        model.addAttribute( "title", "Edit Games");
+            return "games/newgames";
     }
 }
 
