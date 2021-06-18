@@ -60,9 +60,9 @@ footer p{
 
 .container{
     font-family:Roboto, Tahoma, Calibri;
-    display: flex;
     width: 114%;
     margin: 50px;
+
 }
 
 h1{
@@ -103,4 +103,36 @@ tr:hover {
     border-color: #000000;
     border-radius: 2px;
     font-family:Tipe-2, Roboto, Tahoma, Calibri;
+}
+
+
+/*FORM STYLE*/
+
+.form-group{
+    margin:10px;
+}
+
+.col-md6{               /*campo form*/
+    height: 30px;
+}
+
+.col-md2{
+    font-size: 20px;
+}
+form {
+    display:flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.btn-primary{
+    padding: 13px;
+    background-color: white;
+    color:grey;
+    border: none;
+    border-radius: 8px;
+    cursor:pointer;
+}
+.container-card{
+    display: flex;
 }

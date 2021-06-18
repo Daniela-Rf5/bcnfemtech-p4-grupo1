@@ -22,7 +22,7 @@ public class GamesController {
 
 
     @GetMapping("/games/new")
-    String newGame(Model model){
+    String newGame(Model model) {
         Game game = new Game();
         model.addAttribute("game", game);
         model.addAttribute("title", "create new game");
@@ -36,6 +36,12 @@ public class GamesController {
     }
 
 
+    @PostMapping("/games/new")
+    public String addGame(@ModelAttribute Game game) {
+        gamesService.save(game);
+       // return "redirect:/index";
+        return "redirect:/games";
+        //return "redirect:home";
     }
-
+}
 
