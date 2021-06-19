@@ -58,12 +58,14 @@ footer p{
 
 /*Estilo para la sección inventory*/
 
-.container{
-    font-family:Roboto, Tahoma, Calibri;
-    width: 114%;
-    margin: 50px;
-
+.container {
+    font-family: Roboto, Tahoma, Calibri;
+    margin: 1.5rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
+
 
 h1{
     font-family: Slice, Lego brix, type-2, fast_hand;
@@ -108,8 +110,10 @@ tr:hover {
 
 /*FORM STYLE*/
 
-.form-group{
-    margin:10px;
+.form-group {
+    margin: 1rem;
+    display: flex;
+    justify-content: space-between;
 }
 
 .col-md6{               /*campo form*/
@@ -122,7 +126,8 @@ tr:hover {
 form {
     display:flex;
     flex-direction: column;
-    align-items: flex-end;
+    width:50%;
+    margin-top:2rem;
 }
 
 .btn-primary{
@@ -135,4 +140,10 @@ form {
 }
 .container-card{
     display: flex;
+}
+
+.card-footer {
+    margin-inline-start: auto;
+    margin-top: 1rem;
+    margin-right: 17px;
 }
