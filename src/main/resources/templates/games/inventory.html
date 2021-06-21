@@ -4,7 +4,7 @@
     <div class="container-card">
     <div class="card" th:each="game:${games}">
         <img class="videogame-img" th:src="@{/img/LogoLG.png}">
-        <p th:text="${game.title}"></p>
+        <p class="text-games" th:text="${game.title}"></p>
         <div class="container-fields">
             <p th:text="${game.platform}"></p>
             <p th:text="${game.pegi}"></p>
