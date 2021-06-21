@@ -167,7 +167,19 @@ input{
 .container-card{
     display: flex;
 }
+.container-fields {
+    display:flex;
+    justify-content: space-around;
 
+}
+p{
+    font-size: 20px;
+}
+.cnt-button {
+    display: flex;
+    gap: 20px;
+
+}
 .card-footer {
     margin-inline-start: auto;
     margin-top: 1rem;
