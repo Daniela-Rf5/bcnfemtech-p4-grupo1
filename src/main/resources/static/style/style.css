@@ -194,6 +194,11 @@ a{
     padding: 8px;
     border-radius: 6px;
     background-color: #006e60;
+    transition: background-color .8s;
+}
+.btn-edit:hover{
+    background-color: chartreuse;
+    transform: scale(1.2);
 
 }
 .btn-delete{
@@ -201,8 +206,12 @@ a{
     padding: 8px;
     border-radius: 6px;
     background-color: #591d00;
+    transition: background-color .8s;
 }
-
+.btn-delete:hover{
+    background-color: red;
+    transform: scale(1.2);
+}
 .card-footer {
     margin-inline-start: auto;
     margin-top: 1rem;
