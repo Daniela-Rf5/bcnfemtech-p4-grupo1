@@ -3,7 +3,7 @@
     <h1 th:text="${title}"></h1>
     <div class="container-card">
     <div class="card" th:each="game:${games}">
-        <img th:src="@{/img/LogoLG.png}">
+        <img class="videogame-img" th:src="@{/img/LogoLG.png}">
         <p th:text="${game.title}"></p>
         <div class="container-fields">
             <p th:text="${game.platform}"></p>
@@ -12,10 +12,10 @@
             <p th:text="${game.price}"></p>
         </div>
         <div class="cnt-button">
-            <button>
+            <button class="btn-edit">
                 <a th:href="'/games/new/'+${game.id}">Edit</a>
             </button>
-            <button>
+            <button class="btn-delete">
                 <a th:href="'/games/delete/'+${game.id}">Delete</a>
             </button>
         </div>
