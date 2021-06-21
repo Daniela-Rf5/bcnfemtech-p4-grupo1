@@ -3,12 +3,11 @@
     padding:0;
 }
 body{
-    background-color: #FFAA05;
-    color:white;
+    background-color: white;
+    color: #FFAA05;
+    font-family: 'Kirang Haerang', cursive;/*font all page*/
 }
-.logo-img{
-    height: 100px;
-}
+
 nav{
     background: #000000;
     display: flex;
@@ -34,23 +33,24 @@ nav{
 }
 
 
-#logo{
-    width: 110px;
+#logo, #logo2 {
     height: 100px;
 }
 
 footer{
-    position: fixed;
-    bottom: 0;
-    z-index: 1;
+   /* position: fixed;
+    bottom: 0; CAMBIOS EN FOOTER, para que se vea boton en form
+    z-index: 1;*/
     width: 100%;
     display:flex;
     justify-content: center;
     align-items: center;
     height: 25px;
     color: #fff;
-    font-size: 55%;
-    background: #FC3727;
+
+
+    font-size: 65%;
+   background: #FC3727;
 }
 
 footer p{
@@ -60,22 +60,43 @@ footer p{
 
 /*Estilo para la sección inventory*/
 
-.container{
-    font-family:Roboto, Tahoma, Calibri;
-    width: 114%;
-    margin: 50px;
-
+.container {
+   /* font-family: Roboto, Tahoma, Calibri;*/
+    margin: 1.5rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
-
+.container-card {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px;
+    justify-content: center;
+    /* align-content: space-between; */
+}
+.card {
+    margin: 20px;
+    height: 300px;
+    border: 2px solid;
+    border-radius: 12px;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    /* display: ; */
+    /* flex-wrap: wrap; */
+    align-content: space-between;
+    padding: 15px;
+}
 h1{
-    font-family: Slice, Lego brix, type-2, fast_hand;
+/*    font-family: Slice, Lego brix, type-2, fast_hand;*/
     display: flex;
     justify-content: center;
     text-align: center;
     margin-top:15px;
-    font-size: 55px;
+    font-size: 5rem;
 }
 
+/*
 thead{
     background-color: #000000;
     border-radius: 20px;
@@ -104,27 +125,37 @@ tr:hover {
     margin-left: 50px;
     border-color: #000000;
     border-radius: 2px;
-    font-family:Tipe-2, Roboto, Tahoma, Calibri;
+    !*font-family:Tipe-2, Roboto, Tahoma, Calibri;*!
 }
+*/
 
 
 /*FORM STYLE*/
 
-.form-group{
-    margin:10px;
+.form-group {
+    margin: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .col-md6{               /*campo form*/
-    height: 30px;
+    height: 40px;
+    font-size: 1.5rem;
 }
 
 .col-md2{
-    font-size: 20px;
+    font-size: 3.5rem;
 }
 form {
     display:flex;
     flex-direction: column;
-    align-items: flex-end;
+    width:50%;
+    margin-top:2rem;
+}
+input{
+    text-align: center; /*centers text input form*/
+
 }
 
 .btn-primary{
@@ -138,3 +169,64 @@ form {
 .container-card{
     display: flex;
 }
+
+.card-footer {
+    margin-inline-start: auto;
+    margin-top: 1rem;
+    margin-right: 1rem;
+}
+
+/*RESPONSIVE form*/
+
+/*small smartphone*/
+/*smartphone*/
+@media (min-width:320px) and (max-width: 767px){
+    nav{
+        height:50px;
+    }
+    #logo{
+        height: 50px;
+    }
+    .container{
+        margin-top:0;
+    }
+    h1 {
+        margin-top:0;
+        font-size: 1.6rem;
+    }
+    form {
+        width: 95%;
+        margin-top: 0.5rem;
+    }
+    .form-group{
+        margin:0.5rem;
+    }
+    .col-md2{
+        font-size: 1.4rem;
+    }
+    .col-md6 {
+        height: 30px;
+        font-size: 0.8rem;
+    }
+}
+/*tablet*/
+@media (min-width: 768px)and (max-width:1023px){
+
+    form{
+        width: 90%;
+    }
+}
+
+@media (min-width: 1024px) and  (max-width:1919px) {
+    form {
+        width: 60%;
+    }
+}
+@media (min-width: 1920px){
+    form{
+        width: 45%;
+    }
+}
+
+
+
