@@ -65,8 +65,26 @@ footer p{
     align-items: center;
     flex-direction: column;
 }
-
-
+.container-card {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px;
+    justify-content: center;
+    /* align-content: space-between; */
+}
+.card {
+    margin: 20px;
+    height: 300px;
+    border: 2px solid;
+    border-radius: 12px;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    /* display: ; */
+    /* flex-wrap: wrap; */
+    align-content: space-between;
+    padding: 15px;
+}
 h1{
 /*    font-family: Slice, Lego brix, type-2, fast_hand;*/
     display: flex;
