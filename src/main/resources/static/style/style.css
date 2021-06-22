@@ -13,7 +13,7 @@ nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height:100px;
+    height:75px;
 }
 
 .button{
@@ -31,15 +31,13 @@ nav{
     margin-right: 20px;
     text-decoration:none;
 }
-
-
-#logo, #logo2 {
-    height: 100px;
+#logo2 {
+    height: 75px;
 }
 
 footer{
-   /* position: fixed;
-    bottom: 0; CAMBIOS EN FOOTER, para que se vea boton en form
+  /*  position: fixed;
+    bottom: 0; /*CAMBIOS EN FOOTER, para que se vea boton en form
     z-index: 1;*/
     width: 100%;
     display:flex;
@@ -55,7 +53,7 @@ footer{
 
 footer p{
     font-family: "Roboto Light", Tahoma, Arial, sans-serif;
-    margin-left: 50px;
+
 }
 
 /*Estilo para la sección inventory*/
@@ -72,7 +70,6 @@ footer p{
     flex-wrap: wrap;
     margin: 20px;
     justify-content: center;
-    /* align-content: space-between; */
 }
 .card {
     margin: 20px;
@@ -137,11 +134,15 @@ tr:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-direction: column;
 }
 
 .col-md6{               /*campo form*/
     height: 40px;
     font-size: 1.5rem;
+    width: 800px;
+    border-radius: 10px;
+    border: 2px solid #008370;
 }
 
 .col-md2{
@@ -160,16 +161,70 @@ input{
 
 .btn-primary{
     padding: 13px;
-    background-color: white;
-    color:grey;
+    background-color: #008370;
+    color:white;
     border: none;
     border-radius: 8px;
     cursor:pointer;
+    font-weight: bold;
 }
 .container-card{
     display: flex;
 }
+.container-fields {
+    display:flex;
+    justify-content: space-around;
 
+}
+p{
+    font-size: 20px;
+
+}
+a{
+    text-decoration: none;
+    color: white;/* Quita subrayado de anchor tag como la de buttons*/
+}
+.text-games{
+    margin:auto;
+}
+.cnt-button {
+    display: flex;
+    gap: 20px;
+    justify-content: flex-end;
+    /*margin-top: 10px;*/
+    margin: auto;
+
+}
+.videogame-img{
+    border-radius: 15px;
+    margin:auto;
+    width:90%;
+    /*margin-top:7px*/ /*Margin para alinear las imagenes por arriba cuando sea necesario*/
+}
+.btn-edit{
+    border: none;
+    padding: 8px;
+    border-radius: 6px;
+    background-color: #006e60;
+    transition: background-color .8s;
+}
+.btn-edit:hover{
+   /* background-color: #0f9726;*/
+    background-color: #72785d;
+    transform: scale(1.2);
+
+}
+.btn-delete{
+    border: none;
+    padding: 8px;
+    border-radius: 6px;
+    background-color: #591d00;
+    transition: background-color .8s;
+}
+.btn-delete:hover{
+    background-color: red;
+    transform: scale(1.2);
+}
 .card-footer {
     margin-inline-start: auto;
     margin-top: 1rem;
@@ -214,6 +269,12 @@ input{
 
     form{
         width: 90%;
+    }
+    .button{
+        font-size: 25px;
+    }
+    .col-md6 {
+        height: 60px;
     }
 }
 
