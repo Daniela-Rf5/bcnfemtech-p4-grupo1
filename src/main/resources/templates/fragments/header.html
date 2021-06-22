@@ -1,14 +1,10 @@
-<header>
-    <nav>
-
+<nav xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
             <a class="logo-img" href="/">
 <!--                <img id="logo" th:src="@{/img/LogoLG.png}"/>-->
-                <img id="logo2" th:src="@{/img/Logo-lg.svg}"/>
+                <img id="logo2" th:src="@{/img/Logo-Lg.svg}"/>
             </a>
 
-            <a class="button" href="/games/new">Add game</a>
+            <a class="button" href="/games/new" sec:authorize="isAuthenticated()">Add game</a>
+            <a class="button" href="/logout">Logout</a>
 
     </nav>
-</header>
-
-
