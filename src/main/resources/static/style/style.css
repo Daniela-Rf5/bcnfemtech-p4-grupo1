@@ -13,7 +13,7 @@ nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height:100px;
+    height:75px;
 }
 
 .button{
@@ -31,9 +31,8 @@ nav{
     margin-right: 20px;
     text-decoration:none;
 }
-
-#logo, #logo2 {
-    height: 100px;
+#logo2 {
+    height: 75px;
 }
 
 footer{
@@ -139,8 +138,7 @@ tr:hover {
 .col-md6{               /*campo form*/
     height: 40px;
     font-size: 1.5rem;
-    /* cambios rectangulo input*/
-    width: 900px;
+    width: 800px;
     border-radius: 10px;
     border: 2px solid #008370;
 }
@@ -269,6 +267,12 @@ a{
 
     form{
         width: 90%;
+    }
+    .button{
+        font-size: 25px;
+    }
+    .col-md6 {
+        height: 60px;
     }
 }
 
