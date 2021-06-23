@@ -34,8 +34,12 @@ nav{
     margin-right: 20px;
     text-decoration:none;
     list-style:none;
+    transition: background-color .3s
 }
-
+.button:hover{
+    background-color: #008370;
+    transform: scale(1.2);
+}
 
 #logo2 {
     height: 75px;
@@ -145,6 +149,10 @@ input{
     cursor:pointer;
     font-weight: bold;
 }
+.btn-primary:hover {
+    transform: scale(1.1);
+    transition: background-color .6s
+}
 .container-card{
     display: flex;
 }
@@ -163,7 +171,12 @@ a{
     font-size: 22px;
 }
 .game-title {
-    font-size: 25px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.text-games {
+    font-size: 18px;
 }
 .cnt-button {
     display: flex;
@@ -187,8 +200,8 @@ a{
     transition: background-color .8s;
 }
 .btn-edit:hover{
-   /* background-color: #0f9726;*/
-    background-color: #72785d;
+   /* background-color: #0f9726;#003a03 #a2af9f*/
+    background-color: #003a03;
     transform: scale(1.2);
 
 }
@@ -315,12 +328,18 @@ a{
     form {
         width: 60%;
     }
+
 }
 @media (min-width: 1920px){
     form{
         width: 45%;
     }
-
+    .game-title {
+        font-size: 25px;
+    }
+    .text-games {
+        font-size: 20px;
+    }
     .card {
         height: 400px;
         width: 300px;
