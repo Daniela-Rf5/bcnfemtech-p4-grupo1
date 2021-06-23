@@ -1,26 +1,21 @@
 <section class="container" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.w3.org/1999/xhtml">
-    <h1 th:text="${title}"></h1>
+    <h2 th:text="${title}"></h2>
     <div class="container-card">
     <div class="card" th:each="game:${games}">
         <img class="videogame-img" th:src="@{/img/LogoLG.png}">
-        <p class="text-games" th:text="${game.title}"></p>
+        <p class="game-title" th:text="${game.title}"></p>
         <div class="container-fields">
-            <p th:text="${game.platform}"></p>
-            <p th:text="${game.pegi}"></p>
-            <p th:text="${game.discount}"></p>
-            <p th:text="${game.price}"></p>
+            <p class="text-games" th:text="${game.platform}"></p>
+            <p class="text-games" th:text="${game.pegi}"></p>
+            <p class="text-games" th:text="${game.discount}"></p>
+            <p class="text-games" th:text="${game.price}"></p>
         </div>
         <div class="cnt-button">
-          <!-- <button class="btn-edit">
+
+            <button class="btn-edit" sec:authorize="isAuthenticated()">
                 <a th:href="'/games/new/'+${game.id}">Edit</a>
             </button>
-            <button class="btn-delete">
-                <a th:href="'/games/delete/'+${game.id}">Delete</a>
-            </button>-->
-            <button sec:authorize="isAuthenticated()">
-                <a th:href="'/games/new/'+${game.id}">Edit</a>
-            </button>
-            <button sec:authorize="isAuthenticated()">
+            <button class="btn-delete" sec:authorize="isAuthenticated()">
                 <a th:href="'/games/delete/'+${game.id}">Delete</a>
             </button>
         </div>
