@@ -36,7 +36,19 @@
     </div>
     <div class="form-group">
         <label class="col-md2" for="category">Category</label>
-        <input th:field="*{category}" type="text" class="col-md6 form-control form-control-sm" id="category" placeholder="Add category">
+        <select th:field="*{category}" type="text" class="col-md6 form-control form-control-sm" id="category" placeholder="Add category">
+            <option value="categoria0">Add category</option>
+            <option value="categoria1">Adventure</option>
+            <option value="categoria2">Action</option>
+            <option value="categoria3">Fighting</option>
+            <option value="categoria4">Misc</option>
+            <option value="categoria5">Platform</option>
+            <option value="categoria6">Puzzle</option>
+            <option value="categoria7">Racing</option>
+            <option value="categoria8">Role-Playing</option>
+            <option value="categoria9">Shooter</option>
+            <option value="categoria10">Sports</option>
+        </select>
     </div>
     <div class="form-group">
         <label class="col-md2" for="publisher">Publisher</label>
