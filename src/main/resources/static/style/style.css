@@ -217,6 +217,9 @@ a{
     nav{
         height:60px;
     }
+    footer{
+        height: 20px;
+    }
     #logo2{
         height: 60px;
     }
@@ -230,9 +233,24 @@ a{
     h2 {
         font-size: 1.4rem;
     }
+    /*.card {*/
+    /*    height: 300px;*/
+    /*    width: 200px;*/
+    /*}*/
     .card {
-        height: 300px;
-        width: 200px;
+        height: 250px;
+        width: 150px;
+    }
+    .videogame-img {
+        width: 95%;
+        margin-top: 7px;
+    }
+    .game-title {
+        font-size: 18px;
+        font-weight: bold;
+    }
+    .text-games {
+        font-size: 15px;
     }
     form {
         width: 95%;
@@ -263,6 +281,13 @@ a{
     .card {
         height: 300px;
         width: 200px;
+    }
+    .game-title {
+        font-size: 20px;
+        font-weight: bold;
+    }
+    .text-games {
+        font-size: 18px;
     }
     .button{
         font-size: 20px;
