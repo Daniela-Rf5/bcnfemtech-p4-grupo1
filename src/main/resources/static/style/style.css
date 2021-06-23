@@ -272,39 +272,45 @@ a{
     }
 }
 /*tablet*/
-@media (min-width: 768px)and (max-width:1023px){
+@media (min-width: 768px)and (max-width:1023px) {
 
-    form{
+    form {
         width: 90%;
     }
 
-    }
+
     .game-title {
         font-size: 20px;
         font-weight: bold;
     }
+
     .text-games {
         font-size: 18px;
     }
-    .button{
+
+    .button {
         font-size: 20px;
     }
+
     .col-md2 {
         font-size: 2rem;
     }
+
     .col-md6 {
         height: 30px;
         width: 700px;
         font-size: 0.8rem;
     }
-    h1{
+
+    h1 {
         font-size: 2.5rem;
     }
+
     h2 {
         font-size: 2rem;
     }
 
-
+}
 @media (min-width: 1024px) and  (max-width:1919px) {
     form {
         width: 60%;
