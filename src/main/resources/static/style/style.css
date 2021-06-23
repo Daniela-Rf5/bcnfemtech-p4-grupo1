@@ -78,10 +78,10 @@ footer p{
 }
 .card {
     margin: 20px;
-    height: 400px;
+    height: 300px;
     border: 2px solid;
     border-radius: 12px;
-    width: 300px;
+    width: 200px;
     display: flex;
     flex-direction: column;
     /* display: ; */
@@ -278,9 +278,6 @@ a{
         width: 90%;
     }
 
-    .card {
-        height: 300px;
-        width: 200px;
     }
     .game-title {
         font-size: 20px;
@@ -306,7 +303,7 @@ a{
     h2 {
         font-size: 2rem;
     }
-}
+
 
 @media (min-width: 1024px) and  (max-width:1919px) {
     form {
@@ -318,6 +315,10 @@ a{
         width: 45%;
     }
 
+    .card {
+        height: 400px;
+        width: 300px;
+    }
     nav{
         height:100px;
     }
