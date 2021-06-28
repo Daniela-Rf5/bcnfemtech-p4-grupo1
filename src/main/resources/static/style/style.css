@@ -47,7 +47,7 @@ nav{
 
 footer{
     position: fixed;
-    bottom: -2px; /*CAMBIOS EN FOOTER, para que se vea botón bien en form
+    bottom: 0; /*CAMBIOS EN FOOTER, para que se vea botón bien en form
     z-index: 1;*/
     width: 100%;
     display:flex;
@@ -139,17 +139,33 @@ input{
 
 }
 
-
 .btn-primary{
     padding: 13px;
     background-color: #008370;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor:pointer;
+    font-weight: bold;
+    font-family: sans-serif;
+    font-size: 15px;
+}
+.btn-primary:hover {
+    transform: scale(1.1);
+    transition: background-color .6s
+}
+.btn-cancel{
+    padding: 13px;
+    background-color: #97b0aa;
     color:white;
     border: none;
     border-radius: 8px;
     cursor:pointer;
     font-weight: bold;
+    font-family: sans-serif;
+    font-size: 15px;
 }
-.btn-primary:hover {
+.btn-cancel:hover {
     transform: scale(1.1);
     transition: background-color .6s
 }
@@ -220,6 +236,9 @@ a{
     margin-inline-start: auto;
     margin-top: 1rem;
     margin-right: 1rem;
+    margin-bottom: 1rem;
+    display: flex;
+    gap: 15px;
 }
 
 /*RESPONSIVE form*/
