@@ -77,7 +77,6 @@ public class Game implements Serializable {
         this.publisher=publisher;
     }
 
-
     //no necesario Override porque
     @Override
     public String toString() {
