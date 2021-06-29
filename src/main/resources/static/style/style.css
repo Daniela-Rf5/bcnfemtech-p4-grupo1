@@ -177,7 +177,7 @@ input{
     display:flex;
     justify-content: space-around;
     gap: 15px;
-    color: #FFAA05;
+    color: white;
     font-family: 'Architects Daughter', cursive;
     font-size: 13px;
 }
