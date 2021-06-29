@@ -24,11 +24,12 @@ public class Game implements Serializable {
     private Integer pegi;
     private String pegiDescriptor;
     private String photo;
-    public String getpegiDescriptor() {
+
+    public String getPegiDescriptor() {
         return pegiDescriptor;
     }
 
-    public void setpegiDescriptor(String pegiDescriptor) {
+    public void setPegiDescriptor(String pegiDescriptor) {
         this.pegiDescriptor = pegiDescriptor;
     }
 
@@ -47,8 +48,8 @@ public class Game implements Serializable {
         this.platform=platform;
     }
 
-    public Integer getreleaseYear(){return releaseYear;}
-    public void setreleaseYear(Integer releaseYear){
+    public Integer getReleaseYear(){return releaseYear;}
+    public void setReleaseYear(Integer releaseYear){
         this.releaseYear = releaseYear;
     }
 
