@@ -21,16 +21,11 @@ public class Game implements Serializable {
     private Double discountPrice;  //discounted price
     private String category;
     private String publisher;
-    private Integer pegi;
+
+    @ManyToOne
+    @JoinColumn(name="pegi_id")
+    private Pegi pegi;
     private String pegiDescriptor;
-
-    public String getPegiDescriptor() {
-        return pegiDescriptor;
-    }
-
-    public void setPegiDescriptor(String pegiDescriptor) {
-        this.pegiDescriptor = pegiDescriptor;
-    }
 
     public Long getId() {return id;}
     public void setId(Long id){
@@ -82,11 +77,6 @@ public class Game implements Serializable {
         this.publisher=publisher;
     }
 
-    public Integer getPegi() {return pegi;}
-    public void setPegi(Integer pegi){
-        this.pegi=pegi;
-    }
-
 
     //no necesario Override porque
     @Override
@@ -105,6 +95,14 @@ public class Game implements Serializable {
                 ", PEGI='" + pegi + '\'' +
                 ", PEGIDescriptor='" + pegiDescriptor + '\'' +
                 '}';
+    }
+
+    public Pegi getPegi() {
+        return pegi;
+    }
+
+    public void setPegi(Pegi pegi) {
+        this.pegi = pegi;
     }
 }
 
