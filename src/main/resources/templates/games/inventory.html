@@ -1,7 +1,16 @@
 <section class="container" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.w3.org/1999/xhtml">
     <h2 th:text="${title}"></h2>
     <div class="container-card">
-    <div class="card" th:each="game:${games}">
+        <h2>PEGI</h2>
+        <ul class ="game-filter">
+            <li><a href="#">3</a></li>
+            <li><a href="#">7</a></li>
+            <li><a href="#">12</a></li>
+            <li><a href="#">16</a></li>
+            <li><a href="#">18</a></li>
+        </ul>
+
+        <div class="card" th:each="game:${games}">
         <img class="videogame-img" th:src="@{/img/LogoLG.png}">
         <p class="game-title" th:text="${game.title}"></p>
         <div class="container-fields">
@@ -10,8 +19,8 @@
             <p class="text-games" th:text="${game.discount}"></p>
             <p class="text-games" th:text="${game.price}"></p>
         </div>
-        <div class="cnt-button">
 
+        <div class="cnt-button">
             <button class="btn-edit" sec:authorize="isAuthenticated()">
                 <a th:href="'/games/new/'+${game.id}">Edit</a>
             </button>
