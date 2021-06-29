@@ -80,6 +80,8 @@ footer p{
     margin: 20px;
     justify-content: center;
 }
+.game-filter {font-size:22px;
+}
 .card {
     margin: 20px;
     height: 300px;
