@@ -23,7 +23,7 @@ public class Game implements Serializable {
     private String publisher;
     private Integer pegi;
     private String pegiDescriptor;
-
+    private String photo;
     public String getPegiDescriptor() {
         return pegiDescriptor;
     }
@@ -87,6 +87,18 @@ public class Game implements Serializable {
         this.pegi=pegi;
     }
 
+    public String getPhoto() {
+        return photo;
+    }
+
+    public void setPhoto(String photo) {
+        this.photo = photo;
+    }
+    public String getPhotoImagePath() {
+        if (photo == null || id == null) return null;
+        return "/game-photo/" + id + "/" + photo;
+    }
+
 
     //no necesario Override porque
     @Override
@@ -104,8 +116,11 @@ public class Game implements Serializable {
                 ", publisher='" + publisher + '\'' +
                 ", PEGI='" + pegi + '\'' +
                 ", PEGIDescriptor='" + pegiDescriptor + '\'' +
+                ", photo='" + photo + '\'' +
                 '}';
     }
+
+
 }
 
 

@@ -3,7 +3,8 @@
     <h1 th:text="${title}"></h1>
     <div class="container-card">
     <div class="card" th:each="game:${games}">
-        <img class="videogame-img" th:src="@{/img/LogoLG.png}">
+        <img th:src="@{${game.photoImagePath}}" />
+        <!--        &#45;&#45;<img class="videogame-img" th:src="@{/img/LogoLG.png}">-->
         <p class="text-games" th:text="${game.title}"></p>
         <div class="container-fields">
             <p th:text="${game.platform}"></p>
