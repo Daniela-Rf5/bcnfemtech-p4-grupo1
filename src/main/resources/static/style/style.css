@@ -3,7 +3,7 @@
     padding:0;
 }
 body{
-    background-color: white;
+    background-color: black;
     color: #FFAA05;
     font-family: 'Kirang Haerang', cursive;/*font all page*/
 }
@@ -92,6 +92,7 @@ footer p{
     /* flex-wrap: wrap; */
     align-content: space-between;
     padding: 15px;
+    color:white;
 }
 h1{
 /*    font-family: Slice, Lego brix, type-2, fast_hand;*/
@@ -175,7 +176,10 @@ input{
 .container-fields {
     display:flex;
     justify-content: space-around;
-
+    gap: 15px;
+    color: #FFAA05;
+    font-family: 'Architects Daughter', cursive;
+    font-size: 13px;
 }
 
 a{
@@ -184,15 +188,16 @@ a{
 }
 .text-games{
     margin:auto;
-    font-size: 22px;
+    font-size: 13px;
 }
 .game-title {
     font-size: 20px;
     font-weight: bold;
+    color: #FFAA05;
 }
 
 .text-games {
-    font-size: 18px;
+    font-size: 13px;
 }
 .cnt-button {
     display: flex;

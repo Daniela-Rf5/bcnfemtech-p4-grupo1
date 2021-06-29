@@ -63,7 +63,7 @@
     <div class="form-group">
         <label class="col-md2" for="category">Category</label>
         <select th:field="*{category}" type="text" class="col-md6 form-control form-control-sm" id="category" placeholder="Add category">
-            <option th:field="*{category}" value="Undefined">choose game</option>
+            <option th:each="*{category}" value="Undefined">choose game</option>
             <option th:field="*{category}" value="Adventure">Adventure</option>
             <option th:field="*{category}" value="Action">Action</option>
             <option th:field="*{category}" value="Fighting">Fighting</option>
