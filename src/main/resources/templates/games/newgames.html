@@ -82,7 +82,14 @@
     </div>
     <div class="form-group">
         <label class="col-md2" for="pegi_id">Pegi</label>
-        <input th:field="*{pegi}" type="text" class="col-md6 form-control form-control-sm" id="pegi_id" placeholder="Add pegi">
+        <select th:field="*{pegi}" type="text" class="col-md6 form-control form-control-sm" id="pegi_id" placeholder="Add pegi">
+            <option th:field="*{pegi}" value="pegi0">choose Pegi</option>
+            <option th:field="*{pegi}" value="pegi1">3 años</option>
+            <option th:field="*{pegi}" value="pegi1">7 años</option>
+            <option th:field="*{pegi}" value="pegi1">12 años</option>
+            <option th:field="*{pegi}" value="pegi1">16 años</option>
+            <option th:field="*{pegi}" value="pegi1">18 años</option>
+        </select>
     </div>
     <!--<div class="form-group">
         <label class="col-md2" for="pegiDescriptor">Pegi descriptor</label>
