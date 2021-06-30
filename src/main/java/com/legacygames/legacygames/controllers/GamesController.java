@@ -27,7 +27,7 @@ public class GamesController {
         Game game = new Game();
         model.addAttribute("game", game);
         model.addAttribute("title", "create new game");
-        model.addAttribute("pegis", pegiService.allPegis()); /
+        model.addAttribute("pegis", pegiService.allPegis()); // se utiliza para que se muestre la lista desplegable y hay que agregar un PegiService
         return "games/newgames";
 
     }
