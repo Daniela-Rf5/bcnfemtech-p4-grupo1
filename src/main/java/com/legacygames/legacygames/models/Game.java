@@ -23,6 +23,26 @@ public class Game implements Serializable {
     private String publisher;
     private Integer pegi;
     private String pegiDescriptor;
+    private String photo;
+
+    @Override
+    public String toString() {
+        return "Game{" +
+                "id=" + id +
+                ", title='" + title + '\'' +
+                ", platform='" + platform + '\'' +
+                ", yearR='" + releaseYear + '\'' +
+                ", OriginalPrice='" + price + '\'' +
+                ", tag='" + tag + '\'' +
+                ", discount='" + discount + '\'' +
+                ", applyDiscount='" + discountPrice + '\'' +
+                ", category='" + category + '\'' +
+                ", publisher='" + publisher + '\'' +
+                ", PEGI='" + pegi + '\'' +
+                ", PEGIDescriptor='" + pegiDescriptor + '\'' +
+                ", photo='" + photo + '\'' +
+                '}';
+    }
 
     public String getPegiDescriptor() {
         return pegiDescriptor;
@@ -63,9 +83,9 @@ public class Game implements Serializable {
     }
 
     public Integer getDiscount(){return discount;}
-        public void setDiscount(Integer discount){
+    public void setDiscount(Integer discount){
         this.discount=discount;
-        }
+    }
 
     public Double getDiscountPrice(){return discountPrice;}
     public void setDiscountPrice(Double discountPrice){
@@ -88,23 +108,16 @@ public class Game implements Serializable {
     }
 
 
-    //no necesario Override porque
-    @Override
-    public String toString() {
-        return "Game{" +
-                "id=" + id +
-                ", title='" + title + '\'' +
-                ", platform='" + platform + '\'' +
-                ", yearR='" + releaseYear + '\'' +
-                ", OriginalPrice='" + price + '\'' +
-                ", tag='" + tag + '\'' +
-                ", discount='" + discount + '\'' +
-                ", applyDiscount='" + discountPrice + '\'' +
-                ", category='" + category + '\'' +
-                ", publisher='" + publisher + '\'' +
-                ", PEGI='" + pegi + '\'' +
-                ", PEGIDescriptor='" + pegiDescriptor + '\'' +
-                '}';
+    public String getPhoto() {
+        return photo;
+    }
+
+    public void setPhoto(String photo) {
+        this.photo = photo;
+    }
+    public String getPhotoImagePath() {
+        if (photo == null || id == null) return null; //si no hay foto devuelve null
+        return "/game-photo/" + id + "/" + photo;
     }
 }
 

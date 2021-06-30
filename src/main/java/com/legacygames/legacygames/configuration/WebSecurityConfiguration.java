@@ -14,5 +14,6 @@ public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .anyRequest().authenticated()
                 .and().formLogin().permitAll()
                 .and().logout().permitAll();
+        http.formLogin().defaultSuccessUrl("/games",true);
     }
 }
