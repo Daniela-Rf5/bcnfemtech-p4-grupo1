@@ -17,7 +17,7 @@ public class PegiService {
         this.pegiRepository = pegiRepository;
     }
 
-    public List<Pegi> allPegi() {
+    public List<Pegi> allPegis() {
         return (List<Pegi>) pegiRepository.findAll();
     }
 

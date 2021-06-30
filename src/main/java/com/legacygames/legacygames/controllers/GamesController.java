@@ -1,6 +1,7 @@
 package com.legacygames.legacygames.controllers;
 
 import com.legacygames.legacygames.Services.GamesService;
+import com.legacygames.legacygames.Services.PegiService;
 import com.legacygames.legacygames.models.Game;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -13,18 +14,20 @@ import org.springframework.web.bind.annotation.PostMapping;
 @Controller
 public class GamesController {
     private GamesService gamesService;
+    private PegiService pegiService;
 
     @Autowired
-    public GamesController(GamesService gamesService) {
+    public GamesController(GamesService gamesService, PegiService pegiService) {
         this.gamesService = gamesService;
+        this.pegiService = pegiService;
     }
-
 
     @GetMapping("/games/new")
     String newGame(Model model) {
         Game game = new Game();
         model.addAttribute("game", game);
         model.addAttribute("title", "create new game");
+        model.addAttribute("pegis", pegiService.allPegis());
         return "games/newgames";
 
     }
