@@ -3,7 +3,7 @@
     padding:0;
 }
 body{
-    background-color: white;
+    background-color: black;
     color: #FFAA05;
     font-family: 'Kirang Haerang', cursive;/*font all page*/
 }
@@ -51,7 +51,7 @@ nav{
 
 footer{
     position: fixed;
-    bottom: -2px; /*CAMBIOS EN FOOTER, para que se vea botón bien en form
+    bottom: 0; /*CAMBIOS EN FOOTER, para que se vea botón bien en form
     z-index: 1;*/
     width: 100%;
     display:flex;
@@ -84,6 +84,8 @@ footer p{
     margin: 20px;
     justify-content: center;
 }
+.game-filter {font-size:22px;
+}
 .card {
     margin: 20px;
     height: 300px;
@@ -96,6 +98,7 @@ footer p{
     /* flex-wrap: wrap; */
     align-content: space-between;
     padding: 15px;
+    color:white;
 }
 h1{
 /*    font-family: Slice, Lego brix, type-2, fast_hand;*/
@@ -151,7 +154,9 @@ input{
     border: none;
     border-radius: 8px;
     cursor:pointer;
+    font-family: sans-serif;
     font-weight: bold;
+    font-size: 15px;
 }
 .btn-primary:hover {
     transform: scale(1.1);
@@ -163,7 +168,10 @@ input{
 .container-fields {
     display:flex;
     justify-content: space-around;
-
+    gap: 15px;
+    color: white;
+    font-family: 'Architects Daughter', cursive;
+    font-size: 13px;
 }
 
 a{
@@ -172,15 +180,16 @@ a{
 }
 .text-games{
     margin:auto;
-    font-size: 22px;
+    font-size: 13px;
 }
 .game-title {
     font-size: 20px;
     font-weight: bold;
+    color: #FFAA05;
 }
 
 .text-games {
-    font-size: 18px;
+    font-size: 13px;
 }
 .cnt-button {
     display: flex;
@@ -204,7 +213,6 @@ a{
     transition: background-color .8s;
 }
 .btn-edit:hover{
-   /* background-color: #0f9726;#003a03 #a2af9f*/
     background-color: #003a03;
     transform: scale(1.2);
 
