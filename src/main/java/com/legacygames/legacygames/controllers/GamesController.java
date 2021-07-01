@@ -1,5 +1,6 @@
 package com.legacygames.legacygames.controllers;
 
+import com.legacygames.legacygames.Services.CategoryService;
 import com.legacygames.legacygames.Services.GamesService;
 import com.legacygames.legacygames.Services.PegiService;
 import com.legacygames.legacygames.models.Game;
@@ -15,11 +16,13 @@ import org.springframework.web.bind.annotation.PostMapping;
 public class GamesController {
     private GamesService gamesService;
     private PegiService pegiService;
+    private CategoryService categoryService;
 
     @Autowired
-    public GamesController(GamesService gamesService, PegiService pegiService) {
+    public GamesController(GamesService gamesService, PegiService pegiService, CategoryService categoryService) {
         this.gamesService = gamesService;
         this.pegiService = pegiService;
+        this.categoryService = categoryService;
     }
 
     @GetMapping("/games/new")
@@ -28,8 +31,8 @@ public class GamesController {
         model.addAttribute("game", game);
         model.addAttribute("title", "create new game");
         model.addAttribute("pegis", pegiService.allPegis()); // se utiliza para que se muestre la lista desplegable y hay que agregar un PegiService
+        model.addAttribute("categories", categoryService.allCategories()); // se utiliza para que se muestre la lista desplegable y hay que agregar un CategoryService
         return "games/newgames";
-
     }
 
     @PostMapping("/games/new")
@@ -44,7 +47,9 @@ public class GamesController {
         Game game = gamesService.findById(id);
         model.addAttribute("game", game);
         model.addAttribute( "title", "Edit Games");
-            return "games/newgames";
+        model.addAttribute("pegis", pegiService.allPegis()); // se utiliza para que se muestre la lista desplegable y hay que agregar un PegiService
+        model.addAttribute("categories", categoryService.allCategories()); // se utiliza para que se muestre la lista desplegable y hay que agregar un CategoryService
+        return "games/newgames";
     }
 
     @GetMapping("games/delete/{id}")
