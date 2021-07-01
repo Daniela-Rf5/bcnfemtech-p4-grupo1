@@ -19,7 +19,7 @@
             <img class="videogame-img" th:src="@{/img/LogoLG.png}">
             <p class="game-title" th:text="${game.title}"></p>
             <div class="container-fields">
-          <!--      <p class="text-games" th:text="${game.platform.name}"></p> -->
+          <!--      <p class="text-games" th:text="${game.platform.name}"></p> Está dando error al lanzar el servidor-->
                 <p class="text-games" th:text="${game.pegi.name}"></p>
                 <p class="text-games" th:text="${game.discount}"></p>
                 <p class="text-games" th:text="${game.price}"></p>
