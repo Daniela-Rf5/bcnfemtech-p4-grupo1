@@ -7,7 +7,7 @@ import java.util.List;
 import static javax.persistence.GenerationType.IDENTITY;
 
 @Entity
-@Table(name ="category")
+@Table(name = "category")
 
 public class Category {
 
@@ -16,7 +16,7 @@ public class Category {
     private Long id;
     private String name;
 
-    @OneToMany (cascade = CascadeType.ALL, mappedBy = "category")
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "category")
     private List<Game> games;
 
     public void setId(Long id) {
@@ -35,5 +35,13 @@ public class Category {
         this.name = name;
     }
 
+    public List<Game> getGames() {
+        return games;
+    }
 
+    public void setGames(List<Game> games) {
+        this.games = games;
+
+
+    }
 }

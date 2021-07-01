@@ -13,19 +13,25 @@ public class Game implements Serializable {
     @GeneratedValue(strategy = SEQUENCE)
     private Long id;
     private String title;
-    private String platform;
     private Integer releaseYear;
     private Double price;
     private String tag;
     private Integer discount;
     private Double discountPrice;  //discounted price
-    private String category;
     private String publisher;
 
     @ManyToOne
     @JoinColumn(name="pegi_id")
     private Pegi pegi;
     private String pegiDescriptor;
+
+    @ManyToOne
+    @JoinColumn(name="platform_id")
+    private Platform platform;
+
+    @ManyToOne
+    @JoinColumn(name="category_id")
+    private Category category;
 
     public Long getId() {return id;}
     public void setId(Long id){
@@ -37,10 +43,6 @@ public class Game implements Serializable {
         this.title=title;
     }
 
-    public String getPlatform(){return platform;}
-    public void setPlatform(String platform){
-        this.platform=platform;
-    }
 
     public Integer getReleaseYear(){return releaseYear;}
     public void setReleaseYear(Integer releaseYear){
@@ -65,11 +67,6 @@ public class Game implements Serializable {
     public Double getDiscountPrice(){return discountPrice;}
     public void setDiscountPrice(Double discountPrice){
         this.discountPrice = discountPrice;
-    }
-
-    public String getCategory(){return category;}
-    public void setCategory(String category){
-        this.category=category;
     }
 
     public String getPublisher(){return publisher;}
@@ -102,6 +99,22 @@ public class Game implements Serializable {
 
     public void setPegi(Pegi pegi) {
         this.pegi = pegi;
+    }
+
+    public Platform getPlatform() {
+        return platform;
+    }
+
+    public void setPlatform(Platform platform) {
+        this.platform = platform;
+    }
+
+    public Category getCategory() {
+        return category;
+    }
+
+    public void setCategory(Category category) {
+        this.category = category;
     }
 }
 

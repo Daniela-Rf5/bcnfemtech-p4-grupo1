@@ -19,6 +19,7 @@ public class GamesController {
     private PegiService pegiService;
     private CategoryService categoryService;
     private PlatformService platformService;
+
     @Autowired
     public GamesController(GamesService gamesService, PegiService pegiService, CategoryService categoryService, PlatformService platformService) {
         this.gamesService = gamesService;
@@ -33,27 +34,25 @@ public class GamesController {
         Game game = new Game();
         model.addAttribute("game", game);
         model.addAttribute("title", "create new game");
-        model.addAttribute("pegis", pegiService.allPegis()); // se utiliza para que se muestre la lista desplegable y hay que agregar un PegiService
+        model.addAttribute("pegis", pegiService.allPegi()); // se utiliza para que se muestre la lista desplegable y hay que agregar un PegiService
         model.addAttribute("categories", categoryService.allCategories()); // se utiliza para que se muestre la lista desplegable y hay que agregar un CategoryService
-        model.addAttribute("platforms", platformService.allPlatform()); // se utiliza para que se muestre la lista desplegable y hay que agregar un CategoryService
+        model.addAttribute("platform", platformService.allPlatform()); // se utiliza para que se muestre la lista desplegable y hay que agregar un CategoryService
         return "games/newgames";
     }
 
     @PostMapping("/games/new")
     public String addGame(@ModelAttribute Game game) {
         gamesService.save(game);
-       // return "redirect:/index";
         return "redirect:/games";
-        //return "redirect:home";
     }
     @GetMapping("games/new/{id}")
     String editGame(Model model, @PathVariable Long id){
         Game game = gamesService.findById(id);
         model.addAttribute("game", game);
         model.addAttribute( "title", "Edit Games");
-        model.addAttribute("pegis", pegiService.allPegis()); // se utiliza para que se muestre la lista desplegable y hay que agregar un PegiService
+        model.addAttribute("pegis", pegiService.allPegi()); // se utiliza para que se muestre la lista desplegable y hay que agregar un PegiService
         model.addAttribute("categories", categoryService.allCategories()); // se utiliza para que se muestre la lista desplegable y hay que agregar un CategoryService
-        model.addAttribute("platforms", platformService.allPlatform()); // se utiliza para que se muestre la lista desplegable y hay que agregar un CategoryService
+        model.addAttribute("platform", platformService.allPlatform()); // se utiliza para que se muestre la lista desplegable y hay que agregar un CategoryService
         return "games/newgames";
     }
 

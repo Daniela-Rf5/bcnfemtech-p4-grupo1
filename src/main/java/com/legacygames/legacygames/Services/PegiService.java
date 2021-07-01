@@ -1,5 +1,6 @@
 package com.legacygames.legacygames.Services;
 
+
 import com.legacygames.legacygames.models.Pegi;
 import com.legacygames.legacygames.models.PegiRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,10 +15,12 @@ public class PegiService {
 
     @Autowired
     public PegiService(PegiRepository pegiRepository) {
+
         this.pegiRepository = pegiRepository;
     }
 
-    public List<Pegi> allPegis() {
+    public List<Pegi> allPegi() {
+
         return (List<Pegi>) pegiRepository.findAll();
     }
 

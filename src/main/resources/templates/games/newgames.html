@@ -11,8 +11,8 @@
         <input th:field="*{title}" type="text" class="col-md6 form-control form-control-sm" id="title" placeholder="Add title">
     </div>
     <div class="form-group">
-        <label class="col-md2" for="platform">Platform</label>
-        <select th:field="*{platform}" type="text" class="col-md6 form-control form-control-sm" id="platform" placeholder="Add platform">
+        <label class="col-md2" for="platform_id">Platform</label>
+        <select th:field="*{platform}" type="text" class="col-md6 form-control form-control-sm" id="platform_id" placeholder="Add platform">
       <!--  para mostrar lista desplegable de la plataforma!-->
             <option th:each="platform: ${platforms}"
                     th:value="${platform.id}"
@@ -47,8 +47,8 @@
         <input th:field="*{discountPrice}" type="text" class="col-md6 form-control form-control-sm" id="discountPrice" placeholder="Add discount price">
     </div>
     <div class="form-group">
-        <label class="col-md2" for="category">Category</label>
-        <select th:field="*{category}" type="text" class="col-md6 form-control form-control-sm" id="category" placeholder="Add category">
+        <label class="col-md2" for="category_id">Category</label>
+        <select th:field="*{category}" type="text" class="col-md6 form-control form-control-sm" id="category_id" placeholder="Add category">
             <option th:each="category: ${categories}"
                     th:value="${category.id}"
                     th:text="${category.name}"
