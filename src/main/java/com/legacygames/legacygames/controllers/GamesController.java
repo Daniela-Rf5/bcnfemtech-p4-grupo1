@@ -46,15 +46,11 @@ public class GamesController {
         String fileName = StringUtils.cleanPath(multipartFile.getOriginalFilename());
         game.setPhoto(fileName);
         gamesService.save(game);
-<<<<<<< HEAD
         String uploadDir = "game-photo/" + game.getId();                    //mirar si se puede hacer if por aqui
         FileUploadUtil.saveFile(uploadDir, fileName, multipartFile);
         return "redirect:/games";
-
-=======
-        return "redirect:/games";
->>>>>>> grupo1
     }
+
     @GetMapping("/games/new/{id}")
     String editGame(Model model, @PathVariable Long id){
         Game game = gamesService.findById(id);

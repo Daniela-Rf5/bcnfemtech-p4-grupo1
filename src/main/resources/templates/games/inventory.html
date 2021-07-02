@@ -1,6 +1,5 @@
 <section class="container" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.w3.org/1999/xhtml">
     <h2 th:text="${title}"></h2>
-<<<<<<< HEAD
     <div id="wrapper">
         <div id="filters-container">
     <div class="pegi-container">
@@ -44,7 +43,6 @@
             <p id="discount" th:text="|-${game.discount} %|"></p>
             <p id="final-price" th:text="|${game.discountPrice} €|"></p>
             </div>
-=======
     <div class="container-card">
         <div class="pegi-container">
             <h2>PEGI</h2>
@@ -59,7 +57,6 @@
                  <li><a href="#">16 años</a></li>
                  <li><a href="#">18 años</a></li>-->
             </ul>
->>>>>>> grupo1
         </div>
         <div class="card" th:each="game:${games}">
             <img class="videogame-img" th:src="@{/img/LogoLG.png}">
@@ -80,11 +77,10 @@
                 </button>
             </div>
         </div>
-<<<<<<< HEAD
+
     </div>
     </div>
     </div>
-=======
->>>>>>> grupo1
+
 </section>
 

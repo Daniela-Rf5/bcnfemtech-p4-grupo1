@@ -63,7 +63,6 @@ public class Game implements Serializable {
         this.title=title;
     }
 
-
     public Integer getReleaseYear(){return releaseYear;}
     public void setReleaseYear(Integer releaseYear){
         this.releaseYear = releaseYear;
@@ -94,7 +93,6 @@ public class Game implements Serializable {
         this.publisher=publisher;
     }
 
-<<<<<<< HEAD
     public Integer getPegi() {return pegi;}
     public void setPegi(Integer pegi){
         this.pegi=pegi;
@@ -111,7 +109,7 @@ public class Game implements Serializable {
     public String getPhotoImagePath() {
         if (photo == null || id == null) return null; //si no hay foto devuelve null
         return "/game-photo/" + id + "/" + photo;
-=======
+
     //no necesario Override porque
     @Override
     public String toString() {
@@ -129,7 +127,7 @@ public class Game implements Serializable {
                 ", PEGI='" + pegi + '\'' +
                 ", PEGIDescriptor='" + pegiDescriptor + '\'' +
                 '}';
->>>>>>> grupo1
+
     }
 
     public Pegi getPegi() {
