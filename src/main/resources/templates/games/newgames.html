@@ -10,8 +10,6 @@
         <input th:field="*{title}" type="text" class="col-md6 form-control form-control-sm" id="title" placeholder="Add title" required>
     </div>
     <div class="form-group">
-        <label class="col-md2" for="platform">Platform</label>
-        <input th:field="*{platform}" type="text" class="col-md6 form-control form-control-sm" id="platform" placeholder="Add platform" required>
         <label class="col-md2" for="platform_id">Platform</label>
         <select th:field="*{platform}" type="text" class="col-md6 form-control form-control-sm" id="platform_id" placeholder="Add platform">
       <!--  para mostrar lista desplegable de la plataforma!-->
@@ -43,19 +41,6 @@
         <input th:field="*{discountPrice}" type="text" class="col-md6 form-control form-control-sm" id="discountPrice" placeholder="Add discount price">
     </div>
     <div class="form-group">
-        <label class="col-md2" for="category">Category</label>
-        <select th:field="*{category}" type="text" class="col-md6 form-control form-control-sm" id="category" placeholder="Add category" required>
-            <option th:field="*{category}" value="categoria0">choose game</option>
-            <option th:field="*{category}" value="categoria1">Adventure</option>
-            <option th:field="*{category}" value="categoria2">Action</option>
-            <option th:field="*{category}" value="categoria3">Fighting</option>
-            <option th:field="*{category}" value="categoria4">Misc</option>
-            <option th:field="*{category}" value="categoria5">Platform</option>
-            <option th:field="*{category}" value="categoria6">Puzzle</option>
-            <option th:field="*{category}" value="categoria7">Racing</option>
-            <option th:field="*{category}" value="categoria8">Role-Playing</option>
-            <option th:field="*{category}" value="categoria9">Shooter</option>
-            <option th:field="*{category}" value="categoria10">Sports</option>
         <label class="col-md2" for="category_id">Category</label>
         <select th:field="*{category}" type="text" class="col-md6 form-control form-control-sm" id="category_id" placeholder="Add category">
             <option th:each="category: ${categories}"
@@ -70,8 +55,6 @@
         <input th:field="*{publisher}" type="text" class="col-md6 form-control form-control-sm" id="publisher" placeholder="Add publisher" required>
     </div>
     <div class="form-group">
-        <label class="col-md2" for="pegi">Pegi</label>
-        <input th:field="*{pegi}" type="text" class="col-md6 form-control form-control-sm" id="pegi" placeholder="Add pegi" required>
         <label class="col-md2" for="pegi_id">Pegi</label>
         <select th:field="*{pegi}" type="text" class="col-md6 form-control form-control-sm" id="pegi_id" placeholder="Add pegi">
             <option th:each="pegi: ${pegis}"
@@ -84,12 +67,12 @@
     <!--<div class="form-group">
         <label class="col-md2" for="pegiDescriptor">Pegi descriptor</label>
         <input th:field="*{pegiDescriptor}" type="text" class="col-md6 form-control form-control-sm" id="pegiDescriptor" placeholder="Add pegi descriptor">
-    </div>
+    </div>-->
     <div class="form-group">
         <label class="col-md2" for="photo"> Photo </label>
-        <input type="file" name="image" accept="image/png, image/jpeg", id="photo">
+        <input type="file" name="image" accept="image/png, image/jpg, image/jpeg", id="photo">
     </div>
-    </div>-->
+    </div>
     <div class="card-footer">
         <input type="submit" class="btn btn-primary btn-sm" value="Save"/>
     </div>

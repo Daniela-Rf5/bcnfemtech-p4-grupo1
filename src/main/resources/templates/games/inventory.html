@@ -2,85 +2,82 @@
     <h2 th:text="${title}"></h2>
     <div id="wrapper">
         <div id="filters-container">
-    <div class="pegi-container">
-        <h2>PEGI</h2>
-        <ul class ="game-filter">
-            <li class="element-list"><a href="#">3 years</a></li>
-            <li class="element-list"><a href="#">7 years</a></li>
-            <li class="element-list"><a href="#">12 years</a></li>
-            <li class="element-list"><a href="#">16 years</a></li>
-            <li class="element-list"><a href="#">18 years</a></li>
-        </ul>
-    </div>
-        <div class="pegi-container">
-            <h2>CATEGORIES</h2>
-            <ul class ="game-filter">
-                <li class="element-list"><a href="#">Action</a></li>
-                <li class="element-list"><a href="#">Fighting</a></li>
-                <li class="element-list"><a href="#">Misc</a></li>
-                <li class="element-list"><a href="#">Platform</a></li>
-                <li class="element-list"><a href="#">Puzzle</a></li>
-                <li class="element-list"><a href="#">Racing</a></li>
-                <li class="element-list"><a href="#">Role-Playing</a></li>
-                <li class="element-list"><a href="#">Simulation</a></li>
-                <li class="element-list"><a href="#">Shooter</a></li>
-            </ul>
-        </div>
-        </div>
-    <div class="container-card">
-
-        <div class="card" th:each="game:${games}">
-<!--        <img class="videogame-img" th:src="@{/img/LogoLG.png}">-->
-            <div class ="photo-container">
-            <img class="videogame-img" th:src="@{${game.photoImagePath}}" alt= "videogame photo" />
+            <div class="pegi-container">
+                <h2>PEGI</h2>
+                <ul class="game-filter">
+                    <li class ="element-list"><a th:each="pegi:${pegi}" th:href="${'/games?pegiId='+pegi.Id}" th:text="${pegi.name}"></a></li>
+                    <!--<li class="element-list"><a href="#">3 years</a></li>
+                    <li class="element-list"><a href="#">7 years</a></li>
+                    <li class="element-list"><a href="#">12 years</a></li>
+                    <li class="element-list"><a href="#">16 years</a></li>
+                    <li class="element-list"><a href="#">18 years</a></li>-->
+                </ul>
             </div>
-        <p class="game-title" th:text="${game.title}"></p>
-        <div class="container-fields">
-            <p class="text-games" th:text="|Platform: ${game.platform}|"></p>
-            <p class="text-games" th:text="|PEGI: ${game.pegi}|"></p>
-            <div class="prices-container">
-            <p class="text-games" th:text="|${game.price} €|"></p>
-            <p id="discount" th:text="|-${game.discount} %|"></p>
-            <p id="final-price" th:text="|${game.discountPrice} €|"></p>
-            </div>
-    <div class="container-card">
-        <div class="pegi-container">
-            <h2>PEGI</h2>
-            <ul class="game-filter">
-                <li><a th:each="pegi:${pegi}" th:href="${'/games?pegiId='+pegi.Id}" th:text="${pegi.name}"></a></li>
-                <li><a th:each="platform:${platform}" th:href="${'/games?platformId='+platform.Id}"
-                       th:text="${platform.name}"></a></li>
-
-                <!-- <li><a href="#">3 años</a></li>
-                 <li><a href="#">7 años</a></li>
-                 <li><a href="#">12 años</a></li>
-                 <li><a href="#">16 años</a></li>
-                 <li><a href="#">18 años</a></li>-->
-            </ul>
-        </div>
-        <div class="card" th:each="game:${games}">
-            <img class="videogame-img" th:src="@{/img/LogoLG.png}">
-            <p class="game-title" th:text="${game.title}"></p>
-            <div class="container-fields">
-          <!--      <p class="text-games" th:text="${game.platform.name}"></p> Está dando error al lanzar el servidor-->
-                <p class="text-games" th:text="${game.pegi.name}"></p>
-                <p class="text-games" th:text="${game.discount}"></p>
-                <p class="text-games" th:text="${game.price}"></p>
-            </div>
-
-            <div class="cnt-button">
-                <button class="btn-edit" sec:authorize="isAuthenticated()">
-                    <a th:href="'/games/new/'+${game.id}">Edit</a>
-                </button>
-                <button class="btn-delete" sec:authorize="isAuthenticated()">
-                    <a th:href="'/games/delete/'+${game.id}">Delete</a>
-                </button>
+            <div class="pegi-container">
+                <h2>CATEGORIES</h2>
+                <ul class="game-filter">
+                    <li class ="element-list"><a th:each="category:${category}" th:href="${'/games?categoryId='+category.Id}" th:text="${category.name}"></a></li>
+                 <!--   <li class="element-list"><a href="#">Action</a></li>
+                    <li class="element-list"><a href="#">Fighting</a></li>
+                    <li class="element-list"><a href="#">Misc</a></li>
+                    <li class="element-list"><a href="#">Platform</a></li>
+                    <li class="element-list"><a href="#">Puzzle</a></li>
+                    <li class="element-list"><a href="#">Racing</a></li>
+                    <li class="element-list"><a href="#">Role-Playing</a></li>
+                    <li class="element-list"><a href="#">Simulation</a></li>
+                    <li class="element-list"><a href="#">Shooter</a></li>-->
+                </ul>
             </div>
         </div>
 
-    </div>
-    </div>
-    </div>
+        <div class="container-card">
+            <div class="card" th:each="game:${games}">
+                <!--        <img class="videogame-img" th:src="@{/img/LogoLG.png}">-->
+                <div class="photo-container">
+                    <img class="videogame-img" th:src="@{${game.photoImagePath}}" alt="videogame photo"/>
+                </div>
+                <p class="game-title" th:text="${game.title}"></p>
+
+                <div class="container-fields">
+                    <p class="text-games" th:text="|Platform: ${game.platform}|"></p>
+                    <p class="text-games" th:text="|PEGI: ${game.pegi.name}|"></p>
+                    <div class="prices-container">
+                        <p class="text-games" th:text="|${game.price} €|"></p>
+                        <p id="discount" th:text="|-${game.discount} %|"></p>
+                        <p id="final-price" th:text="|${game.discountPrice} €|"></p>
+                    </div>
+                    <!--  <div class="container-card">
+                          <div class="pegi-container">
+                              <ul class="game-filter">
+                                  <li><a th:each="pegi:${pegi}" th:href="${'/games?pegiId='+pegi.Id}" th:text="${pegi.name}"></a></li>
+                                  <!-- <li><a th:each="platform:${platform}" th:href="${'/games?platformId='+platform.Id}"
+                                          th:text="${platform.name}"></a></li>
+                              </ul>
+                        </div>-->
+                    <!--    <div class="card" th:each="game:${games}">
+                            <img class="videogame-img" th:src="@{/img/LogoLG.png}">
+                            <p class="game-title" th:text="${game.title}"></p>
+
+                            <div class="container-fields">
+                                <p class="text-games" th:text="${game.platform.name}"></p> Está dando error al lanzar el servidor
+                                <p class="text-games" th:text="${game.pegi.name}"></p>
+                                <p class="text-games" th:text="${game.discount}"></p>
+                                <p class="text-games" th:text="${game.price}"></p>
+                            </div>-->
+
+                            <div class="cnt-button">
+                                <button class="btn-edit" sec:authorize="isAuthenticated()">
+                                    <a th:href="'/games/new/'+${game.id}">Edit</a>
+                                </button>
+                                <button class="btn-delete" sec:authorize="isAuthenticated()">
+                                    <a th:href="'/games/delete/'+${game.id}">Delete</a>
+                                </button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
 
 </section>
 

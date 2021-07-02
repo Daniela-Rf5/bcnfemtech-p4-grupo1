@@ -6,7 +6,7 @@ import java.io.Serializable;
 import static javax.persistence.GenerationType.SEQUENCE;
 
 @Entity
-@Table(name="games")
+@Table(name = "games")
 
 public class Game implements Serializable {
     @Id
@@ -21,7 +21,7 @@ public class Game implements Serializable {
     private String publisher;
 
     @ManyToOne
-    @JoinColumn(name="pegi_id")
+    @JoinColumn(name = "pegi_id")
     private Pegi pegi;
     private String pegiDescriptor;
     private String photo;
@@ -46,58 +46,76 @@ public class Game implements Serializable {
     }
 
     @ManyToOne
-    @JoinColumn(name="platform_id")
+    @JoinColumn(name = "platform_id")
     private Platform platform;
 
     @ManyToOne
-    @JoinColumn(name="category_id")
+    @JoinColumn(name = "category_id")
     private Category category;
 
-    public Long getId() {return id;}
-    public void setId(Long id){
-        this.id=id;
+    public Long getId() {
+        return id;
     }
 
-    public String getTitle() {return title;}
-    public void setTitle(String title){
-        this.title=title;
+    public void setId(Long id) {
+        this.id = id;
     }
 
-    public Integer getReleaseYear(){return releaseYear;}
-    public void setReleaseYear(Integer releaseYear){
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public Integer getReleaseYear() {
+        return releaseYear;
+    }
+
+    public void setReleaseYear(Integer releaseYear) {
         this.releaseYear = releaseYear;
     }
 
-    public Double getPrice(){return price;}
-    public void setPrice(Double price){
-        this.price =price;
+    public Double getPrice() {
+        return price;
     }
 
-    public String getTag(){return tag;}
+    public void setPrice(Double price) {
+        this.price = price;
+    }
+
+    public String getTag() {
+        return tag;
+    }
+
     public void setTag(String tag) {
         this.tag = tag;
     }
 
-    public Integer getDiscount(){return discount;}
-    public void setDiscount(Integer discount){
-        this.discount=discount;
+    public Integer getDiscount() {
+        return discount;
     }
 
-    public Double getDiscountPrice(){return discountPrice;}
-    public void setDiscountPrice(Double discountPrice){
+    public void setDiscount(Integer discount) {
+        this.discount = discount;
+    }
+
+    public Double getDiscountPrice() {
+        return discountPrice;
+    }
+
+    public void setDiscountPrice(Double discountPrice) {
         this.discountPrice = discountPrice;
     }
 
-    public String getPublisher(){return publisher;}
-    public void setPublisher(String publisher){
-        this.publisher=publisher;
+    public String getPublisher() {
+        return publisher;
     }
 
-    public Integer getPegi() {return pegi;}
-    public void setPegi(Integer pegi){
-        this.pegi=pegi;
+    public void setPublisher(String publisher) {
+        this.publisher = publisher;
     }
-
 
     public String getPhoto() {
         return photo;
@@ -106,28 +124,10 @@ public class Game implements Serializable {
     public void setPhoto(String photo) {
         this.photo = photo;
     }
+
     public String getPhotoImagePath() {
         if (photo == null || id == null) return null; //si no hay foto devuelve null
         return "/game-photo/" + id + "/" + photo;
-
-    //no necesario Override porque
-    @Override
-    public String toString() {
-        return "Game{" +
-                "id=" + id +
-                ", title='" + title + '\'' +
-                ", platform='" + platform + '\'' +
-                ", yearR='" + releaseYear + '\'' +
-                ", OriginalPrice='" + price + '\'' +
-                ", tag='" + tag + '\'' +
-                ", discount='" + discount + '\'' +
-                ", applyDiscount='" + discountPrice + '\'' +
-                ", category='" + category + '\'' +
-                ", publisher='" + publisher + '\'' +
-                ", PEGI='" + pegi + '\'' +
-                ", PEGIDescriptor='" + pegiDescriptor + '\'' +
-                '}';
-
     }
 
     public Pegi getPegi() {
@@ -154,6 +154,7 @@ public class Game implements Serializable {
         this.category = category;
     }
 }
+
 
 
 

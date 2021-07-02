@@ -48,7 +48,6 @@ nav{
     color: #000000FF;
 }
 
-
 footer{
     position: fixed;
     bottom: 0; /*CAMBIOS EN FOOTER, para que se vea botón bien en form
@@ -90,7 +89,9 @@ ul{
     margin: 20px;
     justify-content: center;
 }
-.game-filter {font-size:22px;
+.game-filter {
+
+    font-size:22px;
 }
 .prices-container {
     display: flex;
@@ -139,7 +140,9 @@ h2{
     background-color: white;
     margin: 15px;
     text-align: center;
-    transition-delay: .1s
+    transition-delay: .1s;
+    display:flex;
+    flex-direction: column;
 
 }
 .element-list:hover{
@@ -201,9 +204,7 @@ input{
     transform: scale(1.1);
     transition: background-color .6s
 }
-.container-card{
-    display: flex;
-}
+
 .container-fields {
   /*  display:flex;*/
     display: contents;
