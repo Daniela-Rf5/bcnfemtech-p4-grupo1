@@ -44,6 +44,10 @@ nav{
 #logo2 {
     height: 75px;
 }
+.game-filter a{
+    color: #000000FF;
+}
+
 
 footer{
     position: fixed;

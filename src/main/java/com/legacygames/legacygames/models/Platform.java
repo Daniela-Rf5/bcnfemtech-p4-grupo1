@@ -7,16 +7,16 @@ import java.util.List;
 import static javax.persistence.GenerationType.IDENTITY;
 
 @Entity
-@Table(name = "pegi")
+@Table(name ="platform")
 
-public class Pegi {
+public class Platform {
 
     @Id
     @GeneratedValue(strategy = IDENTITY)
     private Long id;
     private String name;
 
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "pegi")
+    @OneToMany (cascade = CascadeType.ALL, mappedBy = "platform")
     private List<Game> games;
 
     public void setId(Long id) {
@@ -43,5 +43,4 @@ public class Pegi {
         this.games = games;
     }
 }
-
 
