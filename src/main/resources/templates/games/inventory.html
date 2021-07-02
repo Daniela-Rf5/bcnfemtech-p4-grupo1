@@ -39,10 +39,10 @@
                 <p class="game-title" th:text="${game.title}"></p>
 
                 <div class="container-fields">
-                    <p class="text-games" th:text="|Platform: ${game.platform}|"></p>
+                    <p class="text-games" th:text="|Platform: ${game.platform.name}|"></p>
                     <p class="text-games" th:text="|PEGI: ${game.pegi.name}|"></p>
                     <div class="prices-container">
-                        <p class="text-games" th:text="|${game.price} €|"></p>
+                        <p class="text-games" th:text="|Price: ${game.price} €|"></p>
                         <p id="discount" th:text="|-${game.discount} %|"></p>
                         <p id="final-price" th:text="|${game.discountPrice} €|"></p>
                     </div>
