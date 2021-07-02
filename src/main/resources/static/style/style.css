@@ -74,6 +74,12 @@ footer p{
     align-items: center;
     flex-direction: column;
 }
+#wrapper {
+    display:flex;
+}
+ul{
+    list-style-type: none;
+}
 .container-card {
     display: flex;
     flex-wrap: wrap;
@@ -81,6 +87,12 @@ footer p{
     justify-content: center;
 }
 .game-filter {font-size:22px;
+}
+.prices-container {
+    display: flex;
+    margin:auto;
+    align-items: center;
+    gap:15px;
 }
 .card {
     margin: 20px;
@@ -90,14 +102,13 @@ footer p{
     width: 200px;
     display: flex;
     flex-direction: column;
-    /* display: ; */
-    /* flex-wrap: wrap; */
+
     align-content: space-between;
     padding: 15px;
     color:white;
 }
 h1{
-/*    font-family: Slice, Lego brix, type-2, fast_hand;*/
+
     display: flex;
     justify-content: center;
     text-align: center;
@@ -106,8 +117,33 @@ h1{
 }
 h2{
     font-size:3.5rem;
+    text-align: center;
 }
 
+
+#discount{
+    background-color: #c92c1f ;
+    border-radius: 8px;
+    padding:3px;
+    border: 2px solid #c92c1f;
+    font-weight: bold;
+    font-size: 11px;
+}
+.element-list {
+    border:2px solid ; /*#c92c1f*/
+    border-radius: 6px;
+    background-color: white;
+    margin: 15px;
+    text-align: center;
+    transition-delay: .1s
+
+}
+.element-list:hover{
+    transform: scale(1.1);
+}
+.element-list a{
+    color:black;
+}
 
 
 /*FORM STYLE*/
@@ -141,6 +177,9 @@ input{
     text-align: center; /*centers text input form*/
 
 }
+#photo {
+    font-size: 25px;
+}
 
 
 .btn-primary{
@@ -162,7 +201,8 @@ input{
     display: flex;
 }
 .container-fields {
-    display:flex;
+  /*  display:flex;*/
+    display: contents;
     justify-content: space-around;
     gap: 15px;
     color: white;
@@ -201,8 +241,7 @@ a{
     object-fit: fill;
     border-radius: 15px;
     margin:auto;
-    /*width:90%;*/
-    /*margin-top:7px*/ /*Margin para alinear las imagenes por arriba cuando sea necesario*/
+
 }
 .btn-edit{
     border: none;
@@ -231,6 +270,7 @@ a{
     margin-inline-start: auto;
     margin-top: 1rem;
     margin-right: 1rem;
+    margin-bottom: 1rem;
 }
 .photo-container{
     height: 150px;
@@ -272,13 +312,14 @@ a{
     .videogame-img {
         width: 95%;
         margin-top: 7px;
+
     }
     .game-title {
-        font-size: 18px;
+        font-size: 17px;
         font-weight: bold;
     }
     .text-games {
-        font-size: 15px;
+        font-size: 12px;
     }
     form {
         width: 95%;

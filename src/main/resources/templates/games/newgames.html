@@ -8,53 +8,29 @@
     <div class="form-group">
         <input type="hidden" th:field="*{id}">
         <label class="col-md2" for="title"> Title</label>
-        <input th:field="*{title}" type="text" class="col-md6 form-control form-control-sm" id="title" placeholder="Add title">
+        <input th:field="*{title}" type="text" class="col-md6 form-control form-control-sm" id="title" placeholder="Add title" required>
     </div>
     <div class="form-group">
         <label class="col-md2" for="platform">Platform</label>
-        <input th:field="*{platform}" type="text" class="col-md6 form-control form-control-sm" id="platform" placeholder="Add platform">
-      <!--  para mostrar lista desplegable de la plataforma
-            <option th:field="*{platform}" value="platform0">choose platform</option>
-            <option th:field="*{platform}" value="platform1">Wii</option>
-            <option th:field="*{platform}" value="platform2">NES</option>
-            <option th:field="*{platform}" value="platform3">GB</option>
-            <option th:field="*{platform}" value="platform4">DS</option>
-            <option th:field="*{platform}" value="platform5">PS</option>
-            <option th:field="*{platform}" value="platform6">PS2</option>
-            <option th:field="*{platform}" value="platform7">PS3</option>
-            <option th:field="*{platform}" value="platform8">PS4</option>
-            <option th:field="*{platform}" value="platform9">X360</option>
-            <option th:field="*{platform}" value="platform10">3DS</option>
-            <option th:field="*{platform}" value="platform11">N64</option>
-            <option th:field="*{platform}" value="platform12">XB</option>
-            <option th:field="*{platform}" value="platform13">SNES</option>
-            <option th:field="*{platform}" value="platform14">GBA</option>
-            <option th:field="*{platform}" value="platform15">2600</option>
-            <option th:field="*{platform}" value="platform16">PSP</option>
-            <option th:field="*{platform}" value="platform17">PC</option>!-->
-        </input>
+        <input th:field="*{platform}" type="text" class="col-md6 form-control form-control-sm" id="platform" placeholder="Add platform" required>
+
     </div>
     <div class="form-group">
         <label class="col-md2" for="releaseYear">Release year</label>
-        <input th:field="*{releaseYear}" type="text" class="col-md6 form-control form-control-sm" id="releaseYear" placeholder="Add release year">
+        <input th:field="*{releaseYear}" type="number" min="1900" class="col-md6 form-control form-control-sm" id="releaseYear" placeholder="Add release year" required>
     </div>
     <div class="form-group">
         <label class="col-md2" for="price">Price</label>
-        <input th:field="*{price}" type="text" class="col-md6 form-control form-control-sm" id="price" placeholder="Add price">
+        <input th:field="*{price}" type="number" step=".01" class="col-md6 form-control form-control-sm" id="price" placeholder="Add price" required>
     </div>
     <div class="form-group">
         <label class="col-md2" for="tag">Tag</label>
         <input th:field="*{tag}" type="text" class="col-md6 form-control form-control-sm" id="tag" placeholder="Add tag">
- <!--Para poner una lista desplegable del tag
-            <option th:field="*{tag}" value="tag0">choose tag</option>
-            <option th:field="*{tag}" value="tag1">Super</option>
-            <option th:field="*{tag}" value="tag2">Mega</option>
-            <option th:field="*{tag}" value="tag3">Pack2</option>!-->
-        </input>
+
     </div>
     <div class="form-group">
-        <label class="col-md2" for="discount">Discount</label>
-        <input th:field="*{discount}" type="text" class="col-md6 form-control form-control-sm" id="discount" placeholder="Add discount">
+        <label class="col-md2" for="discounted">Discount</label>
+        <input th:field="*{discount}" type="number" class="col-md6 form-control form-control-sm" id="discounted" placeholder="Add discount">
     </div>
     <div class="form-group">
         <label class="col-md2" for="discountPrice">Discount price</label>
@@ -62,7 +38,7 @@
     </div>
     <div class="form-group">
         <label class="col-md2" for="category">Category</label>
-        <select th:field="*{category}" type="text" class="col-md6 form-control form-control-sm" id="category" placeholder="Add category">
+        <select th:field="*{category}" type="text" class="col-md6 form-control form-control-sm" id="category" placeholder="Add category" required>
             <option th:field="*{category}" value="categoria0">choose game</option>
             <option th:field="*{category}" value="categoria1">Adventure</option>
             <option th:field="*{category}" value="categoria2">Action</option>
@@ -78,18 +54,18 @@
     </div>
     <div class="form-group">
         <label class="col-md2" for="publisher">Publisher</label>
-        <input th:field="*{publisher}" type="text" class="col-md6 form-control form-control-sm" id="publisher" placeholder="Add publisher">
+        <input th:field="*{publisher}" type="text" class="col-md6 form-control form-control-sm" id="publisher" placeholder="Add publisher" required>
     </div>
     <div class="form-group">
         <label class="col-md2" for="pegi">Pegi</label>
-        <input th:field="*{pegi}" type="text" class="col-md6 form-control form-control-sm" id="pegi" placeholder="Add pegi">
+        <input th:field="*{pegi}" type="text" class="col-md6 form-control form-control-sm" id="pegi" placeholder="Add pegi" required>
     </div>
     <div class="form-group">
         <label class="col-md2" for="pegiDescriptor">Pegi descriptor</label>
         <input th:field="*{pegiDescriptor}" type="text" class="col-md6 form-control form-control-sm" id="pegiDescriptor" placeholder="Add pegi descriptor">
     </div>
-    <div>
-        <label for="photo"> Photo </label>
+    <div class="form-group">
+        <label class="col-md2" for="photo"> Photo </label>
         <input type="file" name="image" accept="image/png, image/jpeg", id="photo">
     </div>
     <div class="card-footer">
